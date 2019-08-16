@@ -18,15 +18,39 @@ email: steveyoon77@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Blog
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://steveyoon77.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://steveyoon77.kr" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: steveyoon77
 github_username:  steveyoon77
 
+# Post navigation
+post_navigation: true
+
+encoding: 'utf-8'
+# Configure the plugin here
+category_path: "category" # <- default value
+category_layout: "category.html" # <- default value
+
+# PAGINATION
+paginate: 5
+paginate_path: "blog/page:num"
+
+animation: true
+
 # Build settings
 markdown: kramdown
-theme: minima
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: :compressed
 plugins:
+  - jekyll-paginate
+  - jekyll-category-pages
+gem:
+  - jekyll-sitemap
   - jekyll-feed
+  - wdm
+#theme: jekyll-theme-awesome
+theme: jekyll-theme-type
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
