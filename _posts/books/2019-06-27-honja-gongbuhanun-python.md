@@ -2,7 +2,7 @@
 layout: post
 title: "혼자 공부하는 파이썬, 윤인성 지음, 한빛미디어 출판"
 date: 2019-06-27 23:56:00 +0800
-categories: Book
+categories: [books]
 ---
 
 오랜만에 쓰는 서평인데 마침 책이 기술 서적이다.
