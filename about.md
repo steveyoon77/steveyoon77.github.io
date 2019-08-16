@@ -7,7 +7,7 @@ permalink: /about/
 # QUALIFICATION:
   * More than 15 years’ experience as a software/firmware engineer.
     * Familiar with RTOS and Linux.
-    * Skills include high level: C/C++, capable: ARM assembly (esp. for ARM cortex M-series), C#, Java, Python and Perl.
+    * Skills including high level: C/C++, capable: ARM assembly (esp. for ARM cortex M-series), C#, Java, Python and Perl.
     * Skills of hardware interfaces like I2C, SPI, UART and I2S.
     * Making beautiful codes complying with KISS and DRY principles.
   * Strongly understand technical specifications to make a solution.
