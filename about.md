@@ -45,4 +45,4 @@ permalink: /about/
   * Jan. 2005 ~ Apr. 2009
   * Responsible for development of a DVB-H software solution,
     * development of a DRM software solution and supporting mass productions.
-  * Acquired to Microchip (microchip.com)
+  * Acquired by Microchip (microchip.com)
