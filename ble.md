@@ -142,10 +142,12 @@ resolvable address는 prand 부분과 hash 부분으로 이루어져 있다. 다
 
 ### 1.3.1 Public Device Address {u5.0}
     Inquiry가 없으므로 LAP 값의 제한이 당연히 없으나, 명시적으로 LAP 제한이 없다고 함
+
 ### 1.3.2. Random device address
 #### 1.3.2.2. Private Device Address Generation {u5.0}
     non-resolvable private address에서 "random part의 모든 비트가 0이거나 1이면 안된다"에서 "random part의 비트 중 적어도 한 비트는 0이거나 1이어야 한다"로 바뀜.
     resolvable private address에서 "prand의 random part의 모든 비트가 0이거나 1이면 안된다"에서 "prand의 random part 중 적어도 한 비트는 0이거나 1이어야 한다"로 바뀜.
+
 ## 1.4. Physical Channel
 ### 1.4.1. Advertising and Data Channel Indices {u5.0}
     Primary/Secondary Advertising channel 명명
@@ -154,8 +156,10 @@ resolvable address는 prand 부분과 hash 부분으로 이루어져 있다. 다
 
 # 2. Air Interface Packets {u5.0}
     AoA/AoD를 위한 Constant Tone Extension이 포함된 Uncoded PHY와 Coded PHY로 Packet format이 크게 바뀜.
+
 ## 2.1/2 Packet Format {u5.0/u5.1}
-# Packet
+
+### Packet
 BLE는 오직 하나의 패킷 형식과 두 타입의 패킷 만을 가지고 있다. 두 타입은 패킷은 advertising packet과 data packet이다. 패킷 형식은 다음과 같다.
 ```c
 packet {
@@ -230,6 +234,7 @@ payload의 길이를 octet 값으로 표현한다.
 
 ## 2.3 Advertising Physical Channel PDU {u5.0}
     advertising_packet_header의 rfu가 2비트에서 1비트가 되었고, ChSel field가 1비트 생김
+
 ### 2.3.1. Advertising PDU {u5.0}
     payload는 6~37 octets에서 1~255 octets으로 변경
     
