@@ -1233,9 +1233,11 @@ Connectable undirected advertising event(ADV_IND)의 타이밍은 다음 그림�
 * SCAN_RSP를 보냈거나 SCAN_REQ를 보낸 scanner의 device address가 advertising filter policy에 부적합했다면 다음 advertising channel에서 ADV_SCAN_IND를 보내거나 advertising event를 끝낸다.
 
 ADV_SCAN_IND를 보내는 타이밍은 아래의 그림과 같다.
+
 ![](./img/2020-09-13-13.png)
 
 ADV_SCAN_IND에 대한 응답으로 SCAN_REQ를 받고 SCAN_RSP를 다시 보낼 때의 타이밍은 아래의 그림과 같다.
+
 ![](./img/2020-09-13-14.png)
 ![](./img/2020-09-13-15.png)
 
@@ -1250,15 +1252,18 @@ ADV_SCAN_IND에 대한 응답으로 SCAN_REQ를 받고 SCAN_RSP를 다시 보낼
 * AUX_ADV_IND를 보낸 뒤 Advertiser는 AUX_SCAN_REQ를 기다려야 한다. AUX_CONNECT_REQ PDU를 받으면 무시해야 한다.
 
 AUX_ADV_IND 타이밍은 아래와 같다.
+
 ![](./img/2020-09-13-16.png)
 
 AUX_ADV_IND에 대한 응답으로 AUX_SCAN_REQ를 받고 AUX_SCAN_RSP를 다시 보낼 때의 타이밍은 아래와 같다.
+
 ![](./img/2020-09-13-17.png)
 
 #### 4.4.2.6. Non-connectable and non-scannable undirected event type {u5.0}
 	Secondary channel에서 AUX_ADV_IND, AUX_CHAIN_IND를 보낼 수 있도록 추가됨
 
 Non-connectable Undirected Event를 Broadcasting이라고 부르고 데이터를 방송하는데 사용된다.
+
 ![](./img/2020-09-13-18.png)
 ![](./img/2020-09-13-19.png)
 
