@@ -187,8 +187,8 @@ packet {
 
 | Version | Preamble                        |
 |:-------:|:-------------------------------|
-| 4.2 | 뒤따르는 Access Address의 첫 비트가 0이냐 1이냐에 따라<br><ul align=left><li>10101010b</li><li>01010101b</li></ul> |
-| 5.0 | <ul align=left><li>Uncoded PHY</li><li><img src="./img/2020-08-23-17.png"/></li><li>Coded PHY : 80 Symbols 만큼 '00111100'을 10번 반복하여 구성</li></ul> |
+| 4.2 | 뒤따르는 Access Address의 첫 비트가 0이냐 1이냐에 따라<br/><ul><li>10101010b</li><li>01010101b</li></ul> |
+| 5.0 | <ul><li>Uncoded PHY</li><li><img src="./img/2020-08-23-17.png"/></li><li>Coded PHY : 80 Symbols 만큼 '00111100'을 10번 반복하여 구성</li></ul> |
 
 ### 2.1.2 Access Address {u5.0}
 두 디바이스 간의 각 Link Layer connection과 각 periodic advertisement는 모두 다른 Access Address를 가지도록 의도되었다. 
