@@ -49,7 +49,7 @@ The current communication distance should be relatively short to secure communic
 | 125kbps (S=2)  | 1M symbols/s | CRC             | FEC              | 2                | 0-257B     | 720 us              | 17040 us            | 382 kbps           |
 | 500 kbps (S=8) | 1M symbols/s | CRC             | FEC              | 4                | 0-257B     | 462 us              | 4542 us             | 112 kbps           |
 
-[출처: https://www.silabs.com/whitepapers/bluetooth-5-refined-for-the-iot](https://www.silabs.com/whitepapers/bluetooth-5-refined-for-the-iot)
+[Source: https://www.silabs.com/whitepapers/bluetooth-5-refined-for-the-iot](https://www.silabs.com/whitepapers/bluetooth-5-refined-for-the-iot)
 
 ## PHY Update 
 
@@ -243,6 +243,7 @@ sync_info {
 
 ## Reduces Burden and Improves Recognition Performance
 In BT 4.x, the same data had to be repeatedly transmitted three times through the primary channel, but in BT 5.0, only the header is repeated and the actual data is transmitted through the secondary channel to reduce the burden.
+
 ![](./img/2020-09-26-02.jpg)
 
 As the burden is reduced in this way, the minimum advertising interval is reduced from 100ms to 20ms. This has the effect that the scanning device recognizes the advertising packet more quickly.
