@@ -4,8 +4,9 @@
 
 ![](./img/2020-09-21-01.png)
 
-BT 5.0에 두 가지 PHY가 추가되어 3 종류의 PHY 중 선택이 가능해졌다. 
-이 3 종류의 PHY는 아래와 같다.
+We can select a PHY between 3 types of PHYs since the additional 2 PHYs have been defined in BT 5.0.
+
+The 3 PHYs are below.
 
 * LE 1M 
 * LE 2M 
@@ -13,31 +14,33 @@ BT 5.0에 두 가지 PHY가 추가되어 3 종류의 PHY 중 선택이 가능해
 
 ## LE 1M 
 
-Bluetooth 4.x에서 사용했던 PHY이며 Gaussian Frequency Shift Keying (GFSK) 모듈레이션을 사용하는 심볼레이트가 1Ms/s인 PHY이다. 
+It has been used in BT 4.x, and it adopted Gaussian Frequency Shift Keying(GFSK) modulation and its symbol-rate is 1Ms/s(sample per second).
 
 ## LE 2M 
 
-LE 2M PHY는 2Ms/s의 심볼레이트를 가졌다. 
+LE 2M PHY adopts 2Ms/s symbol-rate.
 
-읽을꺼리: https://punchthrough.com/crash-course-in-2m-bluetooth-low-energy-phy/ 
+Read this good article: https://punchthrough.com/crash-course-in-2m-bluetooth-low-energy-phy/ 
 
-### 문제 정의 
+### Problem definition
 
-1Msps(sample per second)을 사용할 경우 전력 소모와 throughput 문제가 제기 되었다. BR/EDR/WLAN과 COEX를 사용하는 디바이스(mobile phone)의 경우 같은 안테나를 사용한다면 time domain에서 짧은 패킷의 경우 더 많이 송출 interleave를 수행하게 되어 많은 전력 소모와 throughput 문제를 야기시켰다. 
+When using 1Msps (sample per second), power consumption and throughput problems were raised. 
 
-이 문제가 2Msps를 정의하기 된 이유이다. 2Msps를 사용할 경우 평균 전력 소모를 감소시키고 효과적으로 throughput을 증가시킬 수 있다. 
- 
+In the case of a device (mobile phone) using BR/EDR/WLAN and COEX, if the same antenna is used, more transmission interleave is performed for short packets in the time domain. It causes a lot of power consumption and throughput problems. 
+
+This problem is the reason why SIG defined 2Msps. If 2Msps is used, average power consumption can be reduced and throughput can be effectively increased. 
+
 ### Comparing with 1M 
 
 ![](./img/2020-09-21-02.png)
 
 ## LE Coded 
 
-LE Coded PHY를 통해 Tx power를 늘리지 않아도 거의 4배 정도의 Range 이득이 생긴다.  
+Even without increasing Tx power, through LE Coded PHY, the range gain is almost 4 times.
 
-### 문제 정의 
+### Problem definition 
 
-현재 통신 거리는 낮은 throughput 어플리케이션에서도 통신의 신뢰를 확보하려면 상대적으로 짧아야 한다. 그래서 1 Msps의 제한을 갖고 있지만 LE Coded PHY로 기존의 BLE PHY 대비 명목상 12dB의 sensitivity 증가를 갖도록 할 수 있다. 
+The current communication distance should be relatively short to secure communication reliability even in low throughput applications. So, although it has a limit of 1 Msps, it is possible to have a nominal 12dB increase in sensitivity compared to the existing BLE PHY with LE Coded PHY.
 
 ![](./img/2020-09-21-03.png)
 
@@ -90,25 +93,28 @@ master and slave request a change of PHY concurrently
 
 ## Advertising extensions
 
-BLE physical channels는 Primary channels와 Secondary channels로 구분된다.
+BLE physical channels are classified to Primary channels and Secondary channels.
 
-* Primary channels는 Advertisement channels로 37, 38, 39의 채널 번호를 갖고 있고, Wi-Fi channel과 over-wrap 되는 것을 피하도록 위치되어 있다.
-* Secondary channels는 37, 38, 39를 제외한 채널들로 데이터 통신(connection event)에 이용된다.
+* Primary channels are Advertisement channels and have channel numbers 37, 38, 39, and are positioned to avoid over-wrap with Wi-Fi channels.
+* Secondary channels are channels other than 37, 38, and 39 and are used for data communication (connection event).
 
 ![](./img/2020-08-23-03.jpg)
 ![](./img/2020-08-23-04.jpg)
 
-BT 4.x에서 advertising packet은 37 octets 길이를 갖고 있는데 헤더 6 octets을 빼면 최대 31 octets만을 payload로 이용할 수 있었다.
+In BT 4.x, advertising packet has a length of 37 octets, and if 6 octets in the header are subtracted, only 31 octets can be used as payload.
 
-BT 5.0에서 advertising packet은 0~36 채널(Secondary channels)에 offloading 하여 최대 255 octets까지 보낼 수 있게 됐다.
+In BT 5.0, advertising packet can be sent up to 255 octets by offloading 0 to 36 channels (Secondary channels).
+
 ![](./img/2020-09-23-01.png)
 
 ### Advertising and Scan Response Data format
-	BT 5.2. Vol3, Part C Generic Access Profile 중 11 장 정리
+```text
+BT 5.2. Vol3, Part C Generic Access Profile, Chapter 11
+```
 
-![](./img/2020-09-23-03.jpg)
+![./img/2020-09-23-03.jpg](./img/2020-09-23-03.jpg)
 
-AD Type은 [SIG의 Assigned Number 중 GAP 관련 페이지](https://www.bluetooth.com/specifications/assigned-numbers/generic-access-profile/)에 정의되어 있다.
+AD Types are defined in [GAP related page on SIG's Assigned Number](https://www.bluetooth.com/specifications/assigned-numbers/generic-access-profile/).
 
 | Name                            | Actual data length in bytes | Description                                                                                                                  |
 | :------------------------------ | :-------------------------- | :--------------------------------------------------------------------------------------------------------------------------- |
@@ -122,27 +128,27 @@ AD Type은 [SIG의 Assigned Number 중 GAP 관련 페이지](https://www.bluetoo
 | Service Data                    | variable                    | A UUID representing a GATT service and its associated data                                                                   |
 | Manufacturer Specific Data      | variable                    | Freely formattable data, to be used at the discretion of the implementation                                                  |
 
-* Advertising data는 advertising event나 periodic advertising event로 전송된다.
-* Host Advertising data는 아래 패킷의 AdvData field에 실린다.
+* Advertising data is carried on advertising event or periodic advertising event.
+* Host Advertising data is loaded in the AdvData field of the packet below.
 	* ADV_IND
 	* ADV_NONCONN_IND
 	* ADV_SCAN_IND
 	* AUX_ADV_IND
 	* AUX_CHAIN_IND
-* Additional Controller Advertising Data는 아래 패킷의 ACAD field에 실린다.
+* Additional Controller Advertising Data is carried in the ACAD field of the packet below.
 	* AUX_ADV_IND
 	* AUX_SYNC_IND
 	* AUX_SCAN_RSP
-* Periodic Advertising data는 아래 패킷의 AdvData field에 실린다.
+* Periodic Advertising data is carried in the AdvData field of the packet below.
 	* AUX_SYNC_IND
 	* AUX_CHAIN_IND
-* Scan Response data는 아래 field에 실린다.
+* Scan Response data is loaded in the field below.
 	* SCAN_RSP 패킷의 ScanRspData field
 	* AUX_SCAN_RSP의 AdvData field
-* 만약 AUX_ADV_IND, AUX_SYNC_IND나 AUX_SCAN_RSP의 AdvData field에 데이터가 모두 들어가지 않는다면 AUX_CHAIN_IND 패킷이 남은 데이터를 보내기 위해 이용된다.
+* If all data could not be included in the AdvData field of AUX_ADV_IND, AUX_SYNC_IND, or AUX_SCAN_RSP, the AUX_CHAIN_IND packet is used to transmit the remaining data.
 
 ### 2.3.4.5. AuxPtr (aux_ptr)
-Secondary channels로 전송되는 advertising payload는 Primary channel의 ADV packet에 새로 추가된 extended header의 AuxPtr field로 가리킨다.
+The advertising payload transmitted to the secondary channels is indicated by the AuxPtr field of the extended header newly added to the ADV packet of the primary channel.
 
 ```c
 extended_header {
@@ -192,17 +198,17 @@ aux_ptr {
 | 1        | 0ppm ~ 50ppm                |
 
 ## Advertising packet chaining
-255 octets 보다 큰 데이터를 보낼 때에는 advertising packet chaining feature를 통해 보낼 수 있다.
+When sending data larger than 255 octets, it can be sent using the advertising packet chaining feature.
 
 ![](./img/2020-09-23-02.png)
 
 ### 2.3.4.9 Host Adverising Data
-Host에서 설정한 advertising data. Fragmention을 지원하고 fragmentation 이전의 데이터가 1650 octets을 초과해서는 안된다.
+Advertising data set by Host. Supports fragmentation and the data before fragmentation shall not exceed 1650 octets.
 
 ## Advertising sets
-* Advertising set는 ID로 패킷을 구분하는 기능을 한다. 
-* 각 advertising set는 advertising interval이나 PDU type과 같은 자신만의 advertising parameters를 갖고 있다.
-* Host는 초기에 advertising set와 각각의 파라미터들을 Controller에게 알리기만 하고, 이후에는 Controller의 Link Layer에서 알아서 한다.
+* Advertising set functions to classify packets by ID.
+* Each advertising set has its own advertising parameters such as advertising interval and PDU type.
+* The host initially informs the controller about the advertising set and each parameter, and the link layer in the controller handles this.
 
 ### 2.3.4.4. AdvDataInfo (adv_data_info) 
 ```c
@@ -211,12 +217,12 @@ adv_data_info {
     bit advertising_set_id[4];
 }
 ```
-* **advertising_set_id**: advertising set을 구별하기 위한 ID
-* **advertising_data_id**: AdvData 내의 데이터 콘텐츠가 이전에 보낸 AdvData와 중복되는지 여부를 구분하는 ID
+* **advertising_set_id**: ID to identify advertising set
+* **advertising_data_id**: ID to identify whether the data content within the AdvData is a duplicate of the previously sent AdvData.
 
 
 ## Periodic advertising
-BT 5.0에서 GAP(Generic Access Profile)에서 동기 모드와 비동기 모드를 지원한다. 동기 모드로 동작할 때 Periodic Advertising Synchronization Establishment procedure가 수행된다. 동기화 모드로 동작할 때 Periodic advertising은 timing과 timing offset 정보를 포함하는 SyncInfo라는 새로운 헤더 필드를 갖게 된다. 이를 위해 AUX_SYNC_IND가 추가되었다.
+In BT 5.0, GAP (Generic Access Profile) supports synchronous mode and asynchronous mode. When operating in synchronous mode, the Periodic Advertising Synchronization Establishment procedure is performed. When operating in synchronization mode, periodic advertising has a new header field called SyncInfo that contains timing and timing offset information. For this purpose, AUX_SYNC_IND has been added.
 
 ### 2.3.4.6 SyncInfo
 ```c
@@ -232,14 +238,14 @@ sync_info {
     u8 event_counter[2];
 }
 ```
-### AUX_SYNC_IND 전송 윈도 
+### AUX_SYNC_IND transmission window 
 ![](./img/2020-09-26-01.jpg)
 
 ## Burden은 줄이고 인식 성능은 향상
-BT 4.x에서는 같은 데이터를 primary channel을 통해 반복해서 세번씩 전송해야 했으나, BT 5.0에서는 헤더만 반복 시키고 실제 데이터는 secondary channel을 통해 보냄으로써 burden을 줄일 수 있게 되었다.
+In BT 4.x, the same data had to be repeatedly transmitted three times through the primary channel, but in BT 5.0, only the header is repeated and the actual data is transmitted through the secondary channel to reduce the burden.
 ![](./img/2020-09-26-02.jpg)
 
-이와 같이 burden이 줄어들게 되어 minimum Advertising Interval이 100ms에서 20ms로 줄어들게 되었다. 이것은 Scaning device가 더 빨리 Advertising packet을 인식하게 되는 효과를 발생시켰다.
+As the burden is reduced in this way, the minimum advertising interval is reduced from 100ms to 20ms. This has the effect that the scanning device recognizes the advertising packet more quickly.
 
 ## Advertising using ADV_EXT_IND
 ![](./img/2020-09-28-01.png)
@@ -250,120 +256,120 @@ BT 4.x에서는 같은 데이터를 primary channel을 통해 반복해서 세�
 ## Bluetooth Direction Finding
 
 ### About Bluetooth Direction Finding
-최초의 무선 방향 찾기 작업은 19 세기 말 Heinrich Hertz와 같은 개척자들에 의해 수행되었다. 초기 시스템은 다양한 방향을 가리키는 안테나로 측정했을 때 신호의 강도를 비교하여 작동했다. 가장 강한 신호 강도가 측정된 방향이 신호의 시작 방향으로 간주되었다.
-20 세기 동안 현장에서 작업이 계속되었으며 특히 신호 위상 비교와 관련된 새로운 방법이 도입되어 훨씬 더 나은 결과를 제공했다.
-Bluetooth Core Spec v5.1에는 고정밀 방향 찾기를 지원하는 새로운 기능이 도입되었다. 컨트롤러 사양이 향상되어 안테나 어레이가 통합된 특수 하드웨어를 사용하여 수신된 무선 신호의 방향 계산을 지원할 수 있게 되었다. HCI (Host Controller Interface)도 수정되어 컨트롤러가 수집한 데이터를 스택의 상위 계층에서 방향 계산을 할 수 있게 되었다.
+The first wireless direction finding work was done by pioneers such as Heinrich Hertz at the end of the 19th century. Early systems worked by comparing the strength of the signal when measured with antennas pointing in different directions. The direction in which the strongest signal strength was measured was considered as the starting direction of the signal.
+During the 20th century, work continued in the field, and new methods were introduced, especially those relating to signal phase comparison, which gave much better results.
+Bluetooth Core Spec v5.1 introduces a new function to support high-precision direction finding. The controller specification has been improved to allow the antenna array to support the calculation of the direction of the received radio signal using special hardware integrated. The HCI (Host Controller Interface) has also been modified so that the data collected by the controller can be directional in the upper layers of the stack.
 
 #### Two Direction Finding Methods
-Bluetooth 방향 찾기는 각각 동일한 기본 기반을 활용하는 두 가지 고유한 아키텍처 또는 방법을 제공합니다. 두 가지 방법 중 첫 번째는 Angle of Arrival(AoA)라고하며 두 번째는 Angle of Departure(AoD)라고 한다.
-각각의 경우 특수한 방향 찾기 신호가 한 장치에서 전송되고, 다른 장치에서 수신된 그 신호의 방향을 계산한다.
+Bluetooth direction finding offers two distinct architectures or methods, each leveraging the same underlying foundation. Of the two methods, the first is called Angle of Arrival (AoA) and the second is called Angle of Departure (AoD).
+In each case, a special direction finding signal is transmitted from one device and the direction of the signal received from another device is calculated.
 
-AoA를 사용하는 수신기는 아래 그림과 같이 다중 안테나 어레이를 갖는다.
+A receiver using AoA has a multi-antenna array as shown in the figure below.
 
 ![AoA Method](./img/2020-12-30-01.jpg)
 
-AoD를 사용하면 아래 그림과 같이 안테나 어레이가 포함된 송신 장치를 만든다.
+With AoD, a transmitting device with an antenna array is made as shown in the figure below.
 
 ![AoD Method](./img/2020-12-30-02.jpg)
 
 ### Direction Finding Theory
-Bluetooth 방향 찾기는 전파의 기본 속성 중 일부를 활용하여 방향 찾기 계산에 사용할 수 있는 데이터를 수집한다.
-응용 프로그램은 삼각법과 안테나 배열 설계에 대한 정보를 포함하는 데이터를 계산에 사용한다.
-블루투스 방향 찾기와 관련된 파동 속성에 대한 설명은 다음과 같다.
+Bluetooth direction finding leverages some of the basic properties of radio waves to gather data that can be used in direction finding calculations.
+The application uses trigonometry and calculation data containing information about antenna array design.
+The description of wave properties related to Bluetooth direction finding is as follows.
 
 #### Wave Cycle
-웨이브는 최대 및 최소 진폭의 반복 패턴을 갖는다. 진폭이 0에서 최고점을 통과하여 내려 가고 진폭이 0에서 최저점을 통과하여 다시 올라가며 웨이브가 반복되는 것을 웨이브 사이클이라고 한다. 웨이브 사이클의 개념은 아래의 그림과 같다.
+The wave has a repeating pattern of maximum and minimum amplitude. The repetition of a wave with an amplitude of zero, passing through the highest point, and then rising again, of amplitude zero, passing through the lowest point, is called a wave cycle. The concept of a wave cycle is shown in the figure below.
 
 ![Wave Cycle](./img/2020-12-30-03.jpg)
 
 #### Wavelength
-아래 그림처럼 파장은 전체 웨이브 사이클의 시작과 끝 사이의 거리이다. 주파수에 의해, 블루투스의 파장은 약 12.5cm이다.
+Wavelength is the distance between the start and end of the entire wave cycle, as shown in the figure below. By frequency, the wavelength of Bluetooth is about 12.5 cm.
 
 ![Wavelength](./img/2020-12-30-04.jpg)
 
 #### Frequency
-Bluetooth는 2.40GHz ~ 2.41GHz의 ISM (산업 과학 및 의료) 대역에서 운용된다.
-Bluetooth LE (Low Energy)는 이 대역을 각각 2MHz 폭의 40 개 채널로 나눈다. 연결 시, 장치는 적응형 주파수 호핑 알고리즘에 의해 구동되는 주파수 변경과 함께 사용 가능한 채널 중 37 개를 사용한다. 비 연결 시나리오에서 Bluetooth Core Specification v5.0에 도입된 확장 advertising을 사용할 때 40 개의 모든 무선 채널이 사용된다. 결과적으로 Bluetooth를 사용하는 통신에는 하나의 고정 주파수가 아닌 다양한 주파수가 포함된다. 블루투스 방향 찾기에 중요한 요소인 파장은 사용하는 주파수에 따라 달라진다.
+Bluetooth operates in the ISM (Industrial Science and Medical) band from 2.40 GHz to 2.41 GHz.
+Bluetooth LE (Low Energy) divides this band into 40 channels, each 2 MHz wide. Upon connection, the device uses 37 of the available channels with frequency changes driven by an adaptive frequency hopping algorithm. All 40 radio channels are used when using the extended advertising introduced in Bluetooth Core Specification v5.0 in a connectionless scenario. As a result, communication using Bluetooth involves multiple frequencies rather than one fixed frequency. The wavelength, which is an important factor in Bluetooth direction finding, depends on the frequency being used.
 
 ![Frequency](./img/2020-12-30-05.jpg)
 
 #### Phase
-웨이브가 안테나를 통과 할 때 측정되는 웨이브 사이클의 특정 지점을 위상이라고 한다. 위상은 웨이브 사이클 시작 시 0부터 웨이브 사이클 종료 시 360도 또는 2π 라디안까지의 각도로 측정된다. 아래 그림은 위상의 개념을 보여준다.
+The specific point in the wave cycle that is measured as the wave passes through the antenna is called the phase. Phase is measured in degrees from 0 at the beginning of the wave cycle to 360 degrees or 2π radians at the end of the wave cycle. The figure below shows the concept of phase.
 
 ![Phase](./img/2020-12-30-06.jpg)
 
 #### Using Phase to Determine Signal Direction
-송신기가 신호를 방출 할 때 장벽이나 신호를 방해 할 수 있는 다른 요인이 없는 경우, 신호는 송신기에서 빛의 속도로 3 차원으로 퍼져 나간다. 그것의 경로는 팽창하는 구체와 같고, 그 구체의 표면에 있는 웨이브는 전송에 포함된 에너지가 더 크고 더 큰 표면적에 걸쳐 퍼짐에 따라 꾸준히 감소하는 진폭을 가지고 있다. 구체의 크기가 커지면 송신기에서 멀어진다.
-이 아이디어를 단순화하면, 돌을 던질 때 물 웅덩이에 나타나는 잔물결과 같은 원형 경로를 추적하는 신호를 사용하여 3 차원이 아닌 2 차원으로 생각하는 것이 더 쉽다.
-신호의 경로에 안테나가 배치되어 있다고 상상하면 웨이브가 지나갈 때 해당 웨이브의 위상은 0도에서 360도까지 지속적으로 변한다.
-주어진 시간 (t)에서 위상을 측정하고 그 값을 p1이라고 부르자.
-첫번째 안테나를 통과하는 원의 원주에 있는 어딘가의 신호 경로에 다른 안테나를 배치하면, 두번째 안테나는 송신기로부터 첫번째 안테나까지의 거리와 완전히 동일한 거리를 갖는다.
-각 안테나를 통과하는 웨이브는 동일한 주파수를 가지므로 파장도 동일하고, 첫번째 안테나와 동시에 두번째 안테나에서 웨이브의 위상(p2)을 측정하면 그 위상은 p1와 동일해야 한다. 아래의 그림 참조.
+When a transmitter emits a signal, the signal spreads out in three dimensions at the speed of light, provided there are no barriers or other factors that can interfere with the signal. Its path is like an expanding sphere, and the waves at the surface of that sphere have a steadily decreasing amplitude as the energy contained in the transmission is larger and spreads over a larger surface area. As the sphere grows in size, it moves away from the transmitter.
+Simplifying this idea, it's easier to think in two dimensions rather than three, with signals that trace circular paths, such as ripples that appear in a pool of water when a stone is thrown.
+If you imagine an antenna placed in the path of a signal, the phase of that wave changes continuously from 0 to 360 degrees as it passes.
+Let's measure the phase at a given time (t) and call that value p1.
+If you place another antenna in the signal path somewhere on the circumference of the circle passing through the first antenna, the second antenna has a distance exactly equal to the distance from the transmitter to the first antenna.
+Since the wave passing through each antenna has the same frequency, the wavelength is the same, and when the phase (p2) of the wave is measured at the second antenna at the same time as the first antenna, the phase must be the same as p1. See picture below.
 
 ![Equal phase values at the same distance from the transmitter](./img/2020-12-30-07.jpg)
 
-이제 안테나 1에서 송신기까지의 거리와 안테나 2에서 송신기까지의 거리의 차이가 파장의 정확한 배수가 되지 않도록 주의하여 두 번째 안테나를 송신기에 더 가깝게 이동하는 경우, 시간 (t)에서 p1과 p2를 측정하면 두 안테나 각각에서 서로 다른 위상 값을 얻을 수 있다.
+Now measure p1 and p2 at time (t) if the second antenna is moved closer to the transmitter taking care that the difference between the distance from antenna 1 to the transmitter and from antenna 2 to the transmitter is not an exact multiple of the wavelength Then, different phase values can be obtained from each of the two antennas.
 
 ![Unequal phase values at different distances from the transmitter](./img/2020-12-31-09.jpg)
 
-두 안테나 사이의 거리 (직선), 위상차 (p2-p1) 및 신호의 파장을 알고 있다면 기본 삼각법을 사용하여 아래 그림처럼 신호 각도를 계산할 수 있다.
+If you know the distance (straight line) between the two antennas, the phase difference (p2-p1), and the wavelength of the signal, you can use basic trigonometry to calculate the signal angle as shown in the figure below.
 
 ![Using phase difference to derive angle of arrival](./img/2020-12-30-08.jpg)
 
 ![Using phase difference to derive angle of depature](./img/2020-12-30-09.jpg)
 
 ### Sampling
-Bluetooth 방향 찾기는 특별히 공식화된 방향 찾기 신호를 사용한다. 이러한 신호 중 하나를 수신하는 장치는 In-phase and Quadrature Sampling 또는 간단히 IQ Sampling으로 알려진 프로세스에서 정확한 간격으로 여러 위상 및 진폭 측정을 수행한다. 단일 IQ 샘플은 일련의 데카르트 좌표로 표시되는 파동의 진폭과 위상 각도로 구성된다. 응용은 직교 표현을 위상 각도와 진폭 값을 산출하는 해당 극좌표로 변환 할 수 있다.
+Bluetooth direction finding uses specially formulated direction finding signals. A device receiving one of these signals makes multiple phase and amplitude measurements at precise intervals in a process known as In-phase and Quadrature Sampling, or simply IQ Sampling. A single IQ sample consists of the amplitude and phase angle of a wave expressed in a series of Cartesian coordinates. Applications can transform the orthogonal representation into corresponding polar coordinates yielding phase angle and amplitude values.
 
 ![Phase angle and amplitude as (I,Q) Cartesian co-ordinates](./img/2020-12-30-10.jpg)
 
-안테나 어레이가 있는 장치에서 IQ 샘플링을 수행 할 때 캡처 된 각 샘플은 어레이의 특정 안테나에 속해야 한다.
-AoA의 경우 수신기에는 안테나 어레이가 포함되어 있으며 적절한 순서로 각 안테나에서 IQ 샘플링을 수행한다.
-AoD의 경우 안테나 어레이가 포함된 송신기이지만 단일 안테나에서 IQ 샘플링을 수행하고 측정을 수행하고 방향 계산에 원격 송신기의 안테나 어레이 설계 세부 사항을 사용하여 속성을 부여하는 것은 여전히 수신기이다. 따라서 AoD가 작동하려면 송신기의 안테나 배열에 대한 세부 정보를 수신기에 제공하는 방법이 필요하다. 이를 수행하는 방법을 정의하는 프로파일은 향후 Bluetooth SIG (Special Interest Group)에서 게시 할 것이다.
+When performing IQ sampling on a device with an antenna array, each captured sample must belong to a specific antenna in the array.
+For AoA, the receiver contains an array of antennas and performs IQ sampling at each antenna in the appropriate order.
+In the case of AoD, it is a transmitter with an antenna array, but it is still the receiver that performs IQ sampling on a single antenna, performs measurements, and attributes using the remote transmitter's antenna array design details for direction calculation. So, for AoD to work, we need a way to provide the receiver with details about the transmitter's antenna arrangement. A profile defining how to do this will be published by the Bluetooth Special Interest Group (SIG) in the future.
 
 ### Antenna Arrays
-안테나 어레이는 다양한 디자인과 안테나 수를 가질 수 있다. 다양한 디자인의 장단점에 대한 논의는 이 백서의 범위를 벗어나지만, 디자인이 다를 수 있는 방식에 대한 이해는 IQ 샘플 데이터에서 신호의 방향을 계산할 때 안테나 어레이를 정의하는 정보의 필요성을 이해하는 데 도움이 될 것이다. 아래의 그림은 몇 가지 안테나 어레이 설계의 예를 보여준다.
+Antenna arrays may have various designs and number of antennas. A discussion of the pros and cons of various designs is beyond the scope of this white paper, but an understanding of how designs may differ will help understand the need for information defining an antenna array when calculating the direction of a signal from IQ sample data. will be The figure below shows some examples of antenna array designs.
 
 ![Examples of antenna array desings](./img/2020-12-30-11.jpg)
 
-ULA와 같은 단순한 선형 설계를 통해 신호에서 단일 각도를 계산할 수 있다. 더 복잡한 안테나 어레이 설계를 통해 2 개 또는 3 개의 각도를 유도 할 수 있다. 예를 들어, 참조 평면을 기준으로 신호의 고도와 방위각을 모두 계산해야 하는 경우가 많다. 아래 그림 참조.
+A simple linear design like ULA allows you to compute a single angle from the signal. Two or three angles can be derived with more complex antenna array designs. For example, it is often necessary to calculate both the elevation and azimuth of a signal relative to a reference plane. See picture below.
 
 ![Azimuth and Elevation Angles](./img/2020-12-30-12.jpg)
 
-이러한 각도로 설명된 선의 교차점을 사용하여 센티미터 단위로 측정된 높은 정확도로 수신기 장치의 위치를 정확하게 찾을 수 있다.
+The intersection of the lines described at these angles can be used to accurately locate the receiver device with high accuracy measured in centimeters.
 
 ### Bluetooth Direction Finding Signals
 #### What is a direction finding signal?
-새로운 블루투스 방향 찾기 신호는 블루투스 방향 찾기가 작동하는 방식의 필수적인 부분이다.
-방향 찾기 신호는 IQ 샘플링을 적용 할 수 있는 일정한 신호 재료의 소스를 제공한다. 두 개의 연결된 장치 간의 방향 찾기를 위해 새로운 링크 계층 PDU가 정의되었으며, 연결없는 방향 찾기를 위해 방향 찾기 목적으로 기존 advertising PDU를 사용하는 방법이 정의되었다. 각각의 경우 PDU에는 CTE (Constant Tone Extension)라는 추가 데이터가 추가된다. 
+The new Bluetooth direction finding signal is an essential part of how Bluetooth direction finding works.
+The direction finding signal provides a constant source of signal material to which IQ sampling can be applied. A new link layer PDU is defined for direction finding between two connected devices, and a method using the existing advertising PDU for direction finding for connectionless direction finding is defined. In each case, additional data called CTE (Constant Tone Extension) is added to the PDU.
 
 #### The Constant Tone Extension
-CTE는 각각 이진수 1로 표현되는 일련의 심볼로만 구성된다. CTE 내에 포함 된 심볼의 수는 스택의 상위 계층에 의해 설정 될 수 있으므로 샘플링 능력이 매우 다양할 수 있는 수신기에 의해 수행되는 IQ 샘플링에 적합한 양의 데이터와 시간을 정할수 있다.
+A CTE consists only of a series of symbols, each represented by a binary one. The number of symbols contained within a CTE can be set by the upper layers of the stack, thus setting the right amount of data and time for IQ sampling performed by receivers whose sampling capabilities can vary widely.
 
 ![Bluetooth direction finding signal with CTE](./img/2020-12-30-13.jpg)
 
 #### Frequency Deviation
-선택한 무선 채널 내에서 Bluetooth는 두 가지 주파수를 사용한다. 하나는 디지털 0을 나타내고 다른 하나는 디지털 1을 표현한다. 이 두 주파수는 채널의 중심 주파수에서 주파수 편차라고 하는 값을 더하거나 빼서 도달한다.
-주파수를 변경하면 파장도 변경되며 파장은 IQ 샘플에서 방향을 계산하는 데 중요한 요소이다. 이러한 이유로 CTE는 디지털 1로만 구성되고, 그 말은 즉, 전체 CTE가 하나의 주파수로 전송되고 따라서 일정한 파장을 갖게 된다는 것이다.
+Within the selected radio channel, Bluetooth uses two frequencies. One represents digital 0 and the other represents digital 1. These two frequencies are reached by adding or subtracting a value called the frequency deviation from the center frequency of the channel.
+Changing the frequency also changes the wavelength, and the wavelength is an important factor in calculating the direction in the IQ sample. For this reason, the CTE consists only of digital ones, which means that the entire CTE is transmitted on one frequency and thus has a constant wavelength.
 
 #### Error detection, security and whitening
-CTE는 Cyclic Redundancy Check(CRC) 계산에 포함되지 않고, Message Integrity Check(MIC) 계산에 포함되지 않으며, Whitening 처리에 포함되지 않는다.
+CTE is not included in Cyclic Redundancy Check (CRC) calculation, Message Integrity Check (MIC) calculation, and whitening processing.
 
 ### Connectionless vs Connection-Oriented Direction Finding
-Bluetooth LE 컨트롤러에 대한 Bluetooth Core Specification v5.1 방향 찾기 개선 사항을 통해 AoA 및 AoD를 각각 Connectoin-Oriented 또는 Connectionless 통신에 사용할 수 있다. 그러나 일반적인 사용 사례의 경우 AoD는 연결없는 통신에 사용되고 AoA는 연결을 통해 사용된다. 이는 Bluetooth SIG가 향후 출시 할 프로파일에 반영 될 것이다.
-표 1은 AoA/AoD 및 Connectionless/Connectoin-Oriented 통신의 네 가지 가능한 순열을 보여준다다. 모두 유효하며 모든 경우에 Bluetooth LE 컨트롤러에서의 지원은 선택 사항이다.
+Bluetooth Core Specification v5.1 direction finding enhancements for Bluetooth LE controllers enable AoA and AoD to be used for Connectoin-Oriented or Connectionless communication respectively. However, for a typical use case, AoD is used for connectionless communication and AoA is used over connection. This will be reflected in the profiles that the Bluetooth SIG will release in the future.
+Table 1 shows the four possible permutations of AoA/AoD and Connectionless/Connectoin-Oriented communication. All are valid and in all cases support in Bluetooth LE controllers is optional.
 
 ![AoA and AoD communication options](./img/2020-12-30-14.jpg)
 
-Connectionless 방향 찾기는 Bluetooth 주기적 advertising을 사용하며 CTE는 표준 ADV_EXT_IND PDU에 추가된다.
-Connectoin-Oriented 방향 찾기는 LL_CTE_REQ PDU에 대한 응답으로 연결을 통해 전송되는 새로운 LL_CTE_RSP 패킷을 사용하여 CTE를 전달한다.
-두 경우 모두 IQ 샘플링이 시작되고 CTE 포함 패킷이 생성되기 전에 완료해야 하는 다양한 설정 및 구성 단계가 있다. 호스트는 호스트 컨트롤러 인터페이스 (HCI) 명령을 사용하여 이 단계를 완료한다.
+Connectionless direction finding uses Bluetooth periodic advertising and the CTE is added to the standard ADV_EXT_IND PDU.
+Connectoin-Oriented direction finding delivers the CTE using a new LL_CTE_RSP packet transmitted over the connection in response to the LL_CTE_REQ PDU.
+In either case, there are various setup and configuration steps that must be completed before the IQ sampling begins and the CTE containing packet is generated. The host completes this step using the Host Controller Interface (HCI) command.
 
 ### The Host Controller Interface
-HCI는 호스트가 방향 찾기 CTE 생성 및 수신을 위해 컨트롤러를 구성 할 수 있는 인터페이스를 제공한다. 세부 사항은 Connectionless 또는 Connection-Oriented 통신을 사용할지 여부에 따라 다르다.
+HCI provides an interface through which the host can configure the controller to generate and receive direction finding CTEs. The details depend on whether you want to use Connectionless or Connection-Oriented communication.
 
 #### HCI and Connectionless Scenarios
-Connectionless 시나리오에서 advertising 장치의 호스트는 CTE를 사용하여 주기적으로 확장된 advertising 패킷을 생성하기 위해 여러 컨트롤러 초기화 단계를 수행해야 한다:
+In a connectionless scenario, the advertising device's host must perform several controller initialization steps to generate periodic extended advertising packets using the CTE:
 
 1. Configure extended advertising
 2. Configure periodic advertising
@@ -375,7 +381,7 @@ Connectionless 시나리오에서 advertising 장치의 호스트는 CTE를 사�
 
 ![HCI commands and connectionless CTE transmission by the advertiser](./img/2020-12-31-01.jpg)
 
-advertising 장치가 전송한 CTE 데이터를 수신하고 샘플링하려는 스캔 장치는 4 개의 컨트롤러 구성 단계를 완료한 다음 호스트에서 IQ 샘플 데이터를 수신하고 처리해야 한다:
+A scanning device that wants to receive and sample the CTE data sent by the advertising device must complete the four controller configuration steps and then receive and process the IQ sample data from the host:
 
 1. Configure extended scanning
 2. Start extended scanning
@@ -385,8 +391,8 @@ advertising 장치가 전송한 CTE 데이터를 수신하고 샘플링하려는
 ![HCI commands and connectionless CTE receipt by the scanner](./img/2020-12-31-02.jpg)
 
 #### HCI and Connection-Oriented Scenarios
-Connection-Oriented 시나리오에서 마스터 또는 슬레이브 장치는 다른 장치에 Constant Tone Extension을 포함하는 LL_CTE_RSP PDU를 전송하도록 요청할 수 있다. 요청은 CTE 생성을 구성하는 여러 매개 변수가 포함 된 LL_CTE_REQ PDU를 전송하여 이루어진다.
-원격 장치가 CTE를 지원하지 않는 경우 LL_UNKNOWN_RSP PDU로 응답하고 로컬 장치는 현재 연결을 사용하여 LL_CTE_REQ PDU를 다시 보내지 않는다.
+In a Connection-Oriented scenario, a master or slave device may request another device to transmit an LL_CTE_RSP PDU containing Constant Tone Extension. The request is made by sending an LL_CTE_REQ PDU containing several parameters that constitute the CTE generation.
+If the remote device does not support CTE, it responds with an LL_UNKNOWN_RSP PDU and the local device does not send back an LL_CTE_REQ PDU using the current connection.
 
 The requesting host device will proceed by:
 1. Configuring CTE receive parameters in the controller
@@ -399,49 +405,49 @@ The responding host will proceed by:
 2. Enabling CTE responses in the controller
 3. Receiving and responding to LL_CTE_REQ PDUs from the other device
 
-CTE 요청은 요청하는 호스트에 의해 한번만 구성 및 활성화 하면 되고 CTE 응답은 응답하는 호스트에 의해 한번만 구성 및 활성화 하면 된다. 그 후 LL_CTE_REQ 및 LL_CTE_RSP PDU는 요청이 비활성화 될 때까지 교환된다. CTE 응답이 활성화되기 전에 LL_CTE_REQ가 수신되면 LL_REJECT_EXT_IND PDU와 함께 거부된다.
+The CTE request needs to be configured and activated only once by the requesting host, and the CTE response needs to be configured and activated only once by the responding host. The LL_CTE_REQ and LL_CTE_RSP PDUs are then exchanged until the request is deactivated. If LL_CTE_REQ is received before the CTE response is activated, it is rejected with an LL_REJECT_EXT_IND PDU.
 
 ![HCI commands and connection-oriented CTE communication](./img/2020-12-31-03.jpg)
 
 #### Obtaining Antenna Array Information
-HCI에는 호스트가 컨트롤러에서 지원하는 안테나에 대한 정보를 얻을 수있는 새로운 명령인 LE Read Antenna Information도 있다. 원격 장치에서 안테나 어레이에 대한 정보를 얻는 절차는 향후 프로파일에서 정의된다.
+HCI also has a new command, LE Read Antenna Information, that allows the host to get information about the antennas supported by the controller. The procedure for obtaining information about the antenna array from a remote device will be defined in a future profile.
 
 #### Parameters
-새로운 HCI 명령은 호스트에게 CTE 콘텐츠와 CTE 생성 및 IQ 샘플링 수행을 위한 절차를 다양한 측면에서 구성 할 수있는 기능을 제공한다.
+The new HCI commands give the host the ability to configure various aspects of the CTE content and procedures for generating CTEs and performing IQ sampling.
 
 ![Parameters concerned with CTE content](./img/2020-12-31-04.jpg)
 
 ![Parameters concerned with antenna switching and CTE sampling](./img/2020-12-31-05.jpg)
 
 #### Device Roles and Responsibilities
-장치가 안테나 어레이를 사용하는 경우 엄격한 타이밍 규칙에 따라 HCI 구성 명령에 지정된 패턴에 따라 안테나 스위칭을 사용해야 한다. IQ 샘플링을 수행 할 때 유사하게 엄격한 타이밍 규칙이 적용되지만 구성에 따라 약간의 변형이 가능하다. 이러한 규칙이 적용되는 방법과 어떤 장치에 어떤 규칙이 적용되는지는 AoA 또는 AoD가 사용되는지 여부와 장치가 송수신 중인지 여부에 따라 다르다.
-안테나 스위칭은 안테나 어레이가 포함된 장치에 적용된다. AoD 방식을 사용하는 경우 송신 장치, AoA를 수행 할 때 수신 장치이다. 반대로, 안테나 어레이를 포함하지 않는 전송 장치는 안테나 스위칭 없이 지속적으로 Constant Tone Extension을 전송한다.
-IQ 샘플링은 포함된 안테나 수에 관계없이 항상 수신 장치에서 수행된다.
-아래의 표는 안테나 스위칭 및 IQ 샘플링과 관련하여 장치의 역할과 책임에 대한 간단한 요약을 제공한다.
+If the device uses an antenna array, strict timing rules require that antenna switching be used according to the pattern specified in the HCI configuration command. Similar strict timing rules apply when performing IQ sampling, but with some variations depending on configuration. How these rules apply and which rules apply to which device depends on whether AoA or AoD is being used and whether the device is transmitting or receiving.
+Antenna switching applies to devices that contain an antenna array. It is a transmitting device when using AoD, and a receiving device when performing AoA. Conversely, a transmitting device that does not include an antenna array continuously transmits constant tone extension without antenna switching.
+IQ sampling is always performed at the receiving device regardless of the number of antennas included.
+The table below provides a brief summary of the roles and responsibilities of devices with respect to antenna switching and IQ sampling.
 
 ![Switching and sampling roles and responsibilities](./img/2020-12-31-06.jpg)
 
 #### Timing
-CTE를 처리 할 때 스위칭과 샘플링을 모두 관리하는 타이밍 규칙은 Bluetooth core spec v5.1에 정의되어 있다. 개념적으로 CTE 처리 시간은 초기 4µs guard period, 8µs reference period, 스위치 슬롯, 샘플 슬롯 또는 스위치 및 샘플 슬롯 쌍의 시퀀스로 나뉜다. 샘플링은 샘플 슬롯 동안 발생하고 안테나는 스위치 슬롯 동안 전환된다.
-AoD의 경우 CTE를 전송할 때 안테나 스위칭이 필요하지만 수신시에는 필요하지 않다. AoA를 사용하고 CTE를 수신 할 때 HCI 명령을 통해 호스트에서 제공한 구성에 따라 안테나 전환이 발생한다. 전송할 때 안테나 전환은 필요하지 않다.
-많은 통신 시스템에서 사용되는 gaurd period는 인접한 전송 사이에 간격을 두어 서로 간섭하지 않도록 설계된 기술이다.
-reference period 동안 1µs 간격으로 첫 번째 안테나에서 8 x IQ 샘플이 수집된다. reference period 동안 안테나 전환이 발생하지 않는다. 호스트는 8 개의 기준 샘플을 사용하여 신호의 주파수와 이로부터 파장을 추정 할 수 있다. 이를 통해보다 정확한 각도 계산을 수행 할 수 있다.
+Timing rules governing both switching and sampling when processing CTE are defined in Bluetooth core spec v5.1. Conceptually, the CTE processing time is divided into an initial 4 µs guard period, an 8 µs reference period, a switch slot, a sample slot, or a sequence of switch and sample slot pairs. Sampling occurs during the sample slot and the antenna is switched during the switch slot.
+For AoD, antenna switching is required when transmitting the CTE, but not required when receiving. When using AoA and receiving a CTE, antenna switching occurs according to the configuration provided by the host via the HCI command. Antenna switching is not required when transmitting.
+The gaurd period used in many communication systems is a technology designed not to interfere with each other by spacing between adjacent transmissions.
+8 x IQ samples are collected from the first antenna at 1 µs intervals during the reference period. Antenna switching does not occur during the reference period. The host can use the 8 reference samples to estimate the frequency of the signal and the wavelength from it. This allows for more accurate angle calculations.
 
-샘플과 스위치 슬롯의 길이는 1µs 또는 2µs이다. 2µs 슬롯 지원은 필수이며 1µs 지원은 선택 사항dl다. HCI 구성은 컨트롤러에서 사용할 슬롯 길이를 나타낸다.
+Sample and switch slots are either 1 µs or 2 µs in length. 2µs slot support is mandatory and 1µs support is optional. The HCI configuration indicates the slot length to be used by the controller.
 
-Bluetooth core spec v5.1에 따라 아래의 표는 사용중인 전송 대 수신 장치 역할 및 AoA 대 AoD 방법에 따라 CTE에 타이밍 규칙이 적용되는 방식을 보여준다.
+According to the Bluetooth core spec v5.1, the table below shows how the timing rules are applied to the CTE according to the transmission versus reception device role being used and the AoA versus AoD method.
 
 ![CTE timing rules](./img/2020-12-31-07.jpg)
 
-아래의 표는 사용 가능한 옵션을 동일한 데이터로 요약하여 보여준다.
+The table below summarizes the available options with the same data.
 
 ![CTE timing options](./img/2020-12-31-08.jpg)
 
 ### Choices of PHY
-Bluetooth 방향 찾기는 LE 1M 또는 LE 2M PHY 중 하나를 사용할 수 있지만 LE Coded PHY는 사용할 수 없다.
+Bluetooth direction finding can use either the LE 1M or LE 2M PHY, but not the LE Coded PHY.
 
 ### Developing specifications (update: 2020-12-31)
-아래의 표준은 아직 draft 상태이거나 review 중인 상태이다.
+The standards below are still in draft or under review.
 
 |Release |Development Type    |Group   |Hidden Titles  |
 |:-------|:-------------------|:-------|:--------------|
