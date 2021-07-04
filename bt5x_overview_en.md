@@ -241,7 +241,7 @@ sync_info {
 ### AUX_SYNC_IND transmission window 
 ![](./img/2020-09-26-01.jpg)
 
-## Burden은 줄이고 인식 성능은 향상
+## Reduces Burden and Improves Recognition Performance
 In BT 4.x, the same data had to be repeatedly transmitted three times through the primary channel, but in BT 5.0, only the header is repeated and the actual data is transmitted through the secondary channel to reduce the burden.
 ![](./img/2020-09-26-02.jpg)
 
