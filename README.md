@@ -30,6 +30,6 @@
 * [Book: 혼자 공부하는 파이썬](./book_혼자공부하는파이썬.md)
 * [GPS NMEA](./nmea.md)
 * [Lightweight Machine to Machine Technical Specification](oma_lwm2m.md)
-* [paper: Kalman Filter로 IMU와 GPS 결합](./paper_Kalman%20Filter로_IMU와_GPS_결합.md)
+* [paper: Kalman Filter로 IMU와 GPS 결합](./paper_KalmanFilter로_IMU와_GPS_결합.md)
 * [thesis: sensor fusion of GPS and accelerometer data for estimation of vehicle dynamics](./thesis_Mats_Malmberg_GPS_ACC_결합.md)
 * [thesis: Motion tracking in field sports using GPS and IMU](./thesis_Motion_tracking_using_GPS_IMU_roobeek.md)
