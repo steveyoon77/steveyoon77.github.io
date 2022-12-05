@@ -1,0 +1,525 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"heap",
+				"heappush"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"mar",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"pa",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"package",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"ma",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"m",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"markdo",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"packageresource",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"makr",
+				"Markdown Preview: Preview in Browser"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 201.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/blog/steveyoon77.github.io"
+	],
+	"file_history":
+	[
+		"/D/OneDrive/memo/diary/2022-12-04.md",
+		"/D/OneDrive/memo/wiki/book_파이썬알고리즘인터뷰.md",
+		"/D/OneDrive/memo/wiki/book_the_tcpip_guide.md",
+		"/D/OneDrive/memo/wiki/book_The_Calculus_Story.md",
+		"/D/OneDrive/memo/wiki/book_혼자공부하는파이썬.md",
+		"/D/OneDrive/memo/diary/2022-12-02.md",
+		"/D/OneDrive/memo/wiki/book_802.11-wireless-networks-the-definitive-guide.md",
+		"/D/OneDrive/memo/diary/2022-12-01.md",
+		"/D/OneDrive/memo/diary/2022-11-30.md",
+		"/D/OneDrive/memo/diary/2022-11-29.md",
+		"/D/OneDrive/memo/diary/2022-11-28.md",
+		"/D/OneDrive/memo/diary/2022-11-27.md",
+		"/D/OneDrive/memo/diary/2022-11-24.md",
+		"/D/OneDrive/memo/diary/2022-11-22.md",
+		"/D/OneDrive/memo/diary/2022-11-21.md",
+		"/D/OneDrive/memo/wiki/book_arm_cortex-m3_guide.md",
+		"/D/OneDrive/memo/wiki/cosera_applied_calculus_with_python.md",
+		"/D/OneDrive/memo/wiki/Coursera.md",
+		"/D/OneDrive/memo/diary/2022-11-20.md",
+		"/D/OneDrive/memo/diary/2022-11-18.md",
+		"/D/OneDrive/memo/wiki/book_stewart_calculus_9e.md",
+		"/D/OneDrive/memo/diary/2022-11-17.md",
+		"/D/OneDrive/memo/wiki/tool_powershell.md",
+		"/D/OneDrive/memo/diary/2022-11-13.md",
+		"/D/OneDrive/memo/diary/2022-11-12.md",
+		"/D/OneDrive/memo/wiki/algorithm-programmers-commureading-2022-10.md",
+		"/D/OneDrive/memo/diary/2022-11-10.md",
+		"/D/OneDrive/memo/diary/2022-11-09.md",
+		"/D/OneDrive/memo/diary/2022-11-05.md",
+		"/D/OneDrive/memo/diary/2022-11-06.md",
+		"/D/OneDrive/memo/diary/2022-11-04.md",
+		"/D/OneDrive/memo/diary/2022-11-03.md",
+		"/D/OneDrive/memo/diary/2022-11-02.md",
+		"/D/OneDrive/memo/diary/2022-10-31.md",
+		"/D/OneDrive/memo/diary/2022-10-25.md",
+		"/D/OneDrive/memo/diary/2022-10-23.md",
+		"/D/OneDrive/memo/wiki/telit_bravo_iot.md",
+		"/D/OneDrive/memo/wiki/radar.md",
+		"/D/OneDrive/memo/wiki/2022-10-23.md",
+		"/D/OneDrive/memo/diary/2022-10-22.md",
+		"/D/OneDrive/memo/diary/2022-10-21.md",
+		"/D/OneDrive/memo/diary/2022-10-20.md",
+		"/D/OneDrive/memo/wiki/algorithm-fastcampus-algorithm-coding-test.md",
+		"/D/OneDrive/memo/diary/2022-10-19.md",
+		"/D/OneDrive/memo/diary/2022-10-18.md",
+		"/D/OneDrive/memo/diary/2022-10-17.md",
+		"/D/OneDrive/memo/diary/thesis_Motion_tracking_using_GPS_IMU_roobeek.md",
+		"/D/OneDrive/memo/wiki/windows11_maintain.md",
+		"/C/Users/steve/update.ps1",
+		"/D/OneDrive/memo/wiki/tool_usb2uart.md",
+		"/D/OneDrive/memo/diary/2022-10-14.md",
+		"/C/Users/steve/AppData/Roaming/Sublime Text/Packages/MarkdownPreview/js/math_config.js",
+		"/D/OneDrive/memo/diary/2022-09-01.md",
+		"/D/OneDrive/memo/diary/2022-09-07.md",
+		"/D/OneDrive/memo/wiki/paper_정재영_GPS_INS_결합.md",
+		"/D/OneDrive/memo/diary/2022-10-13.md",
+		"/D/OneDrive/memo/diary/2022-09-05.md",
+		"/D/OneDrive/memo/wiki/tool_sublimetext.md",
+		"/D/OneDrive/memo/diary/2022-10-11.md",
+		"/D/OneDrive/memo/diary/2022-10-10.md",
+		"/D/OneDrive/memo/wiki/data/total_command_readme.txt",
+		"/D/OneDrive/memo/wiki/book_일반수학의정석_확률과통계.md",
+		"/Users/steveyoon77/Library/CloudStorage/OneDrive-개인/memo/diary/2022-10-09.md",
+		"/Users/steveyoon77/OneDrive/memo/diary/2022-10-08.md",
+		"/Users/steveyoon77/Library/CloudStorage/OneDrive-개인/memo/diary/2022-10-08.md",
+		"/Users/steveyoon77/OneDrive/memo/diary/2022-10-07.md",
+		"/Users/steveyoon77/Library/CloudStorage/OneDrive-개인/memo/diary/2022-10-07.md",
+		"/Users/steveyoon77/Library/CloudStorage/OneDrive-개인/memo/diary/2022-10-06.md",
+		"/Users/steveyoon77/OneDrive/memo/diary/2022-10-05.md",
+		"/Users/steveyoon77/OneDrive/memo/diary/2022-09-22.md",
+		"/Users/steveyoon77/Library/CloudStorage/OneDrive-개인/memo/diary/2022-10-05.md",
+		"/Users/steveyoon77/OneDrive/memo/wiki/book_hackers_toeic_voca.md",
+		"/Users/steveyoon77/OneDrive/memo/wiki/gps-test-environment.md",
+		"/Users/steveyoon77/OneDrive/memo/diary/2022-09-16.md",
+		"/C/Users/styo/ncs/v1.9.0/toolchain/cmd/env.cmd",
+		"/C/Users/styo/OneDrive/memo/diary/2022-09-15.md",
+		"/C/Users/styo/OneDrive/memo/diary/2021-06-24.md",
+		"/C/Users/styo/OneDrive/memo/diary/2021-06-21.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-09-14.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-08-29.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-08-26.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-09-04.md",
+		"/C/Users/styo/OneDrive/memo/wiki/nrf9160_sdk.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-09-12.md",
+		"/C/Users/styo/.nrfconnect-apps/updates.json",
+		"/C/Users/styo/.nrfconnect-apps/apps.json",
+		"/C/Users/styo/.nrfutil/logs/20220906-T071356.279822800UTC-a173210f64df44f4bd49b58565a9609c-nrfutil-toolchain-manager.txt",
+		"/C/Users/styo/.nrfutil/config/nrfutil-toolchain-manager/config.json",
+		"/C/Users/styo/OneDrive/memo/wiki/book_일반수학의정석_확률과통계.md",
+		"/C/Users/styo/zephyrrc.cmd",
+		"/C/working/ncs/zephyr/zephyr-env.cmd",
+		"/C/working/ncs/.west/config",
+		"/C/Users/styo/OneDrive/memo/wiki/book_kalman_filter_algorithm_mathmatically_explained.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-09-13.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-09-08.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-09-05.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-09-06.md",
+		"/C/working/ncs/zephyr/west.yml",
+		"/C/Users/styo/OneDrive/memo/diary/2022-02-14.md",
+		"/C/Users/styo/OneDrive/memo/wiki/gps-test-environment.md",
+		"/C/working/ncs/zephyr/MAINTAINERS.yml",
+		"/C/Users/styo/OneDrive/memo/diary/2022-09-07.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-06-08.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-06-09.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-06-10.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-09-02.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-09-03.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-09-01.md",
+		"/C/Users/styo/OneDrive/memo/wiki/gosiche.md",
+		"/C/Users/styo/OneDrive/memo/wiki/cypress_gary[구우경].md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-08-31.md",
+		"/C/Users/styo/OneDrive/memo/wiki/paper_정재영_GPS_INS_결합.md",
+		"/C/Users/styo/OneDrive/memo/wiki/thesis_Mats_Malmberg_GPS_ACC_결합.md",
+		"/C/Users/styo/OneDrive/memo/wiki/paper_Kalman Filter로_IMU와_GPS_결합.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-08-16.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-08-30.md",
+		"/C/Users/styo/OneDrive/memo/wiki/book_intro_math_stat.md",
+		"/C/Users/styo/OneDrive/memo/wiki/book_probability_statistics_[이공계생을위한확률과통계]_강혜정.md",
+		"/C/Users/styo/OneDrive/memo/wiki/latex.md",
+		"/C/Users/styo/OneDrive/memo/wiki/book_bayesian_estimation_and_tracking.md",
+		"/C/Users/styo/OneDrive/memo/wiki/book_basic_probability_statistics[확률과통계입문].md",
+		"/C/Users/styo/OneDrive/memo/wiki/book_engineering_mathematics[수식이보이는공학수학]-localhost.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-04-26.md",
+		"/C/Users/styo/OneDrive/memo/wiki/book_intro_math_stat-localhost.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-08-22.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-08-23.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-08-24.md",
+		"/C/Users/styo/OneDrive/memo/diary/2022-08-25.md"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 122.0,
+		"where_history":
+		[
+			"*.md",
+			"",
+			"<current file>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"더 맵게",
+			"혼자 공부하는 파이썬",
+			"no sleep",
+			"nosleep",
+			"powershell",
+			"Motion tracking",
+			"powershell",
+			"Power shell",
+			"at",
+			"비선형 시스템의 칼만필터",
+			"IMEI",
+			"UART",
+			"MI",
+			"MI_00",
+			"west build -b",
+			"west build -b thingy91",
+			"SLM test",
+			"west flash",
+			"west build",
+			"toolchain",
+			"west update",
+			"Jacobian",
+			"ros",
+			"Kalman Filter로 IMU와 GPS 결합",
+			"Unscented Kalman",
+			"Unscented Kalman filter",
+			"hackrf",
+			"Probability & Statistics",
+			"확률과 통계",
+			"강혜정",
+			"hackrf",
+			"2022-08-23",
+			"2022-08-22",
+			"provisioning",
+			"Thingy",
+			"ADXL",
+			"Kalman Filter로 IMU와 GPS 결합",
+			"양광웅",
+			"Youngmin",
+			"칼만 필터를 이용한",
+			"GPS/INS fusion",
+			"introduction to mathmatical statistics",
+			"book",
+			"GPS",
+			"nordickorea",
+			"wifi",
+			"_nodkorea_2g",
+			"introduction",
+			"19.124",
+			"백강고시체",
+			"img",
+			"wiki",
+			"Cat-M",
+			"Funciton",
+			"Rigid body",
+			"2022-08-04",
+			"kinematics",
+			"kinematic",
+			"kinematics",
+			"\\left{",
+			"nable",
+			"ith",
+			"jth",
+			"{A}",
+			"vacation",
+			"{Q",
+			"{Q}",
+			"{a}",
+			"math",
+			"{R}",
+			"{h",
+			"{h}",
+			"psi",
+			"\\mathrm{R}",
+			"\\mathbb{R}",
+			"\\begin{cases}",
+			"k",
+			"http",
+			"det",
+			"ㅇㄷㅅ",
+			"2.1.8",
+			"ㅡㅕ",
+			"vector_space",
+			"랜덤변수",
+			"## FOOT NOTE",
+			"vector_space",
+			"sqrt",
+			"Part",
+			"\\Re",
+			"적분 상수",
+			"Weekly",
+			"plot",
+			"img",
+			"\\e",
+			"\\quart",
+			"NOTE_01",
+			"FOOT NOTE",
+			"\\triangle",
+			"\\text",
+			"3.1",
+			"\\phi",
+			"X_i",
+			"x_i",
+			"P_k^-",
+			"partial",
+			"11.1",
+			"phi",
+			"야코비",
+			"equiv",
+			"11.6",
+			"equiv",
+			"equi",
+			"equiv",
+			"iff",
+			"iif",
+			"\\iif",
+			"비선형",
+			"desc",
+			"선형",
+			"\\\\\\",
+			"\\\\",
+			"//",
+			"phy",
+			"phi",
+			"$$",
+			"$$$",
+			"Book: 칼만 필터",
+			"   "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\\mathbf{R}",
+			"\\mathbb{R}",
+			"\\Delta",
+			"- ",
+			"{k+1}^- ",
+			"k^- ",
+			"-"
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 43.3333333333
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 150.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.markdown":
+	{
+		"height": 132.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "steveyoon77.github.io.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 205.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
