@@ -70,27 +70,27 @@ The Bootstrap Interface is used to provision essential information into the LwM2
 Client initiated Bootstrap with this operation.
 
 | Parameter | Required | Default | Notes |
-|:--        |:--       |:--      |:--    |
+|:---        |:---       |:---      |:---    |
 |```/bs?ep={endpoint Client Name}``` |yes | - |Indicates the LwM2M Client's "Endpoint Name" in order to allow the LwM2M Bootstrap to provision the Bootstrap Information for the LwM2M Client |
 
 ##### 5.2.7.2. BOOTSTRAP-FINISH
 To terminate the Bootstrap Sequence previously initiated.
 
 | Parameter | Required | Default | Notes |
-|:--        |:--       |:--      |:--    |
+|:---        |:---       |:---      |:---    |
 |```/bs``` |yes | - | - |
 
 ##### 5.2.7.3. BOOTSTRAP DISCOVER
 To discover which LwM2M Objects and Object Instances are supported by a certain LwM2M Client.
 
 | Parameter | Required | Default | Notes |
-|:--        |:--       |:--      |:--    |
+|:---        |:---       |:---      |:---    |
 |Object ID |no | - |Indicates the Object. (/ means all Objects) |
 
 ##### 5.2.7.4. BOOTSTRAP WRITE
 
 | Parameter | Required | Default | Notes |
-|:--        |:--       |:--      |:--    |
+|:---        |:---       |:---      |:---    |
 |Object ID |yes | - |Indicates the Object |
 |Object Instance ID |no | - |Indicates the Object Instance to write |
 |Resource ID |no | - |Indicates the Resource to write. The payload is the new value for the Resource. If no Resource ID is indicated, then the value included payload is an Object Instance containing the Resource values. |
@@ -99,7 +99,7 @@ To discover which LwM2M Objects and Object Instances are supported by a certain 
 ##### 5.2.7.5. BOOTSTRAP DELETE
 
 | Parameter | Required | Default | Notes |
-|:--        |:--       |:--      |:--    |
+|:---        |:---       |:---      |:---    |
 |Object ID |no | - |Indicates the Object from which Object Instance will be deleted; if no Object ID is indicated, all existing Object Instances (except the LwM2M Bootstrap-Server Account and the Instance of the Device Object) in the LwM2M Client will be delted. |
 |Object Instance ID |no | - |Indicates the Object Instance to delete. If no Object Instance ID is indicated, then all Instnaces of the designated object (Object ID MUST be provided) are deleted.
 
@@ -111,7 +111,7 @@ To discover which LwM2M Objects and Object Instances are supported by a certain 
 After the LwM2M Device is turned on and the bootstrap procedure has been completed, the LwM2M Client MUST perform a "Register" operation to each LwM2M Server that the LwMeM Client has a Server Object Instance.
 
 | Parameter | Required | Default | Notes |
-|:--        |:--       |:--      |:--    |
+|:---        |:---       |:---      |:---    |
 |Endpoint Client Name |yes | - |See section 6.3 |
 |Lifetime |yes | - |Indicates the expected lifetime of the registration for this LwM2M client. This value MUST be the same as the value held in the Resource named "Lifetime" of the corresponding instance of Server Object (ID#1):/1/x/1. |
 |LwM2M Version |yes | - |Indicates the version of the LwM2M Enabler that the LwM2M Client supports. The LwM2M version number reported MUST correspond to the apporved version number of this document. |
@@ -122,7 +122,7 @@ After the LwM2M Device is turned on and the bootstrap procedure has been complet
 ##### 5.3.1.1. Behaviour with Current Transport Binding and Mode
 
 | Current Transport Binding and Mode | Behaviour |
-|:--                                 |:--        |
+|:---                                 |:---        |
 |U(UDP) |The LwM2M Server expects that the LwM2M Client is reachable via the UDP binding at any time. The LwM2M Server MUST send requests to a LwM2M Client using the UDP binding. The LwM2M Client MUST send the response to such a request over the UDP binding. This is the normal default mode of operation. |
 |UQ(UDP with Queue Mode) |The Server MUST queue all requests to the LwM2M Client, sending requests via UDP when the LwM2M Client is on-line as described in Section 8.4. Queue Mode Operation. The LwM2M Server MUST send requests to a LwM2M Client using the UDP binding. The LwM2M Client MUST send the response to such a request over the UDP binding. |
 |S(SMS) |The LwM2M Server expects that the LwM2M Client is reachable via the SMS binding at any time. The LwM2M Server MUST send requests to a LwM2M Client using the SMS binding. The LwM2M Client MUST send the response to such a request over the SMS binding. |
@@ -134,7 +134,7 @@ After the LwM2M Device is turned on and the bootstrap procedure has been complet
 Periodically or based on certain events within the LwM2M Client or initiated by the LwM2M Server, the LwM2M Client updates its registration information with a LwM2M Server by sending an "Update" operation to the LwM2M Server.
 
 | Parameter | Required |
-|:--        |:--       |
+|:---        |:---       |
 |Lifetime |no |
 |Binding Mode |no |
 |SMS Number |no |

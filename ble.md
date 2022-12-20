@@ -959,7 +959,7 @@ control_data {
 * phys는 아래의 값을 사용한다. 
 
 |Bit number|Meaning|
-|:-- |:-- |
+|:--- |:--- |
 |0|다른 것도 가능하지만 송신 디바이스는 LE 1M PHY를 선호한다| 
 |1|다른 것도 가능하지만 송신 디바이스는 LE 2M PHY를 선호한다| 
 |2|다른 것도 가능하지만 송신 디바이스는 LE Coded PHY를 선호한다| 
@@ -978,14 +978,14 @@ bit cte_type_req[2]; 
 ```
 
 |Field |Description |
-|:-- |:-- |
+|:--- |:--- |
 |min_cte_len_req |Constant Tone Extension의 최소 길이, 8us 단위, 범위는 2~2 |
 |cte_type_req |Constant Tone Extension의 type |
 
 ##### Constant Tone Extension Type 
 
 |Value |Meaning |
-|:-- |:-- |
+|:--- |:--- |
 |0 |AoA Constant Tone Extension |
 |1 |AoD Constant Tone Extension with 1us slots |
 |2 |AoD Constant Tone Extension with 2us slots |
@@ -1149,7 +1149,7 @@ Advertising event는 다음의 타입 중 하나이다.
 
 #### BT 4.2
 |Advertising Event Type|Related PDU|Allowable response PDU| |
-|:-- |:-- |:-- |:-- |
+|:--- |:--- |:--- |:--- |
 | | |SCAN_REQ|CONNECT_REQ|
 |Connectable Unidirected Event|ADV_IND|Yes|Yes|
 |Connectable Directed Event|ADV_DIRECT_IND|No|Yes|

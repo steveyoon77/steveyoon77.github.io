@@ -6,7 +6,7 @@ Example:
 ```$GPGGA,134658.00,5106.9792,N,11402.3003,W,2,09,1.0,1048.47,M,-16.27,M,08,AAAA*60```
 
 |Structure |Description |Symbol |Example |
-|:-- |:-- |:-- |:-- |
+|:--- |:--- |:--- |:--- |
 |$GPGGA |Log header | |$GPGGA |
 |utc |UTC time status of position (hours/minutes/seconds/ decimal seconds) |hhmmss.ss |202134.00 |
 |lat |Latitude (DDmm.mm) |llll.ll |5106.9847 |
@@ -28,7 +28,7 @@ Example:
 GPS Quality Indicators:
 
 |Indicator |Description |
-|:-- |:-- |
+|:--- |:--- |
 |0 |Fix not available or invalid |
 |1 |Single point<br/>Converging PPP(TerraStar-L) |
 |2 |Pseudo-range differential<br/>Converged PPP(TerraStar-L)<br/>Converging PPP(TerraStar-C, TerraStar-C PRO, TerraStar-X) |
@@ -48,7 +48,7 @@ $GPGLL,5107.0013414,N,11402.3279144,W,205412.00,A,A*73
 ```
 
 |Structure |Description |Example |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |$GPGLL |Log header |$GPGLL |
 |lat |Latitude (DDmm.mm) |5106.7198674 |
 |lat dir |Latitude direction (N = North, S = South) |N |
@@ -63,7 +63,7 @@ $GPGLL,5107.0013414,N,11402.3279144,W,205412.00,A,A*73
 NMEA Positioning System Mode Indicator:
 
 |Mode |Indicator |
-|:-- |:-- |
+|:--- |:--- |
 |A |Autonomous |
 |D |Differential |
 |E |Estimated (dead reckoning) mode |
@@ -79,7 +79,7 @@ $GPGSA,M,3,17,02,30,04,05,10,09,06,31,12,,,1.2,0.8,0.9*35
 ```
 
 |Structure |Description |Symbol |Example |
-|:-- |:-- |:-- |:-- |
+|:--- |:--- |:--- |:--- |
 |$GPGSA |Log header | |$GPGSA |
 |mode MA |A = Automatic 2D/3D<br/>M = Manual, forced to operate in 2D or 3D |M |M |
 |mode 123 |Mode: 1 = Fix not available; 2 = 2D; 3 = 3D |x |3 |
@@ -104,7 +104,7 @@ $GLGSV,2,2,06,72,16,063,35,67,01,253,*66
 ```
 
 |Structure |Description |Symbol |Example |
-|:-- |:-- |:-- |:-- |
+|:--- |:--- |:--- |:--- |
 |$GPGSV |Log header | |$GPGSV |
 |# msgs |Total number of messages (1-9) |x |3 |
 |msg # |Message number (1-9) |x |1 |
@@ -127,7 +127,7 @@ $GPRMC,144326.00,A,5107.0017737,N,11402.3291611,W,0.080,323.3,210307,0.0,E,A*20
 ```
 
 |Structure |Field Description |Symbol |Example |
-|:-- |:-- |:-- |:-- |
+|:--- |:--- |:--- |:--- |
 |$GPRMC |Log header | |$GPRMC |
 |utc |UTC of position |hhmmss.ss |144326.00 |
 |pos status |Position status (A = data valid, V = data invalid) |A |A |
@@ -148,7 +148,7 @@ Westerly variation (W) adds to True course. |a |E |
 NMEA Positioning System Mode Indicator:
 
 |Mode |Indicator |
-|:-- |:-- |
+|:--- |:--- |
 |A |Autonomous |
 |D |Differential |
 |E |Estimated (dead reckoning) mode |

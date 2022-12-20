@@ -39,7 +39,7 @@ Signalling Radio Bearers (SRBs) are the Radio Bearers(RBs) that are used by UE f
 
 #### MIB-NB Parameters
 |Parameter |Size(bits) |Meaning |
-|:--       |:--        |:--     |
+|:---       |:---        |:---     |
 |systemFrameNumber-MSB |4 |4 most-significant bits of the 10 bits representing SFN |
 |hyperSFN-LSB |2 |2 least significant bits of hyper SFN. The remaining bits are present in SIB1-NB |
 |systemInfoValueTag |5 |A value that is incremented if any of the SIB contents have changed |
@@ -50,7 +50,7 @@ Signalling Radio Bearers (SRBs) are the Radio Bearers(RBs) that are used by UE f
 
 #### SIB1-NB Parameters
 |Parameter |Size(Bits) |Meaning |
-|:--       |:--        |:--     |
+|:---       |:---        |:---     |
 |hyperSFN-MSB |8 |8 MSB of hyper-SFN. The 2 LSB are indicated in MIB-NB. This constructs a 10 bit Hyper SFN. Hyper-SFN is incremented by one when the SFN wraps around |
 |plmn-IdentityList |List |A list of PLMN ID where this cell belongs to. PLMN ID consist of a 3-digit MCC(Mobile Country Code) and 2 or 3-digit MNC(Mobile Network Code) |
 |trackingAreaCode |16 |A Tracking Area Code (TAC) that is common to all PLMNs in the list |
@@ -63,7 +63,7 @@ Signalling Radio Bearers (SRBs) are the Radio Bearers(RBs) that are used by UE f
 
 #### Optional System Information Blocks
 |System Information Block |Purpose |
-|:--                      |:--     |
+|:---                      |:---     |
 |SystemInformationBlockType2-NB (SIB2-NB) |Contains radio resource configuration for PDCP, RLC, MAC, and PHY sub-layers that are common for all UEs. It also contains information about the network support for CIoT optimization, random access and DRX power saving parameters. |
 |SystemInformationBlockType3-NB (SIB3-NB) |Contains common cell (Re)selection information for intra- and inter-frequency cell (Re)selection other than for neighboring cells. |
 |SystemInformationBlockType4-NB (SIB4-NB) |Contains neighboring cell related information relevant only for intra-frequency cell (Re)selection. |
@@ -79,7 +79,7 @@ Signalling Radio Bearers (SRBs) are the Radio Bearers(RBs) that are used by UE f
 
 #### RRCConnectionRequest Message
 |Parameter |Size(Bits) |Meaning |
-|:--       |:--        |:--     |
+|:---       |:---        |:---     |
 |ue-Identity |40 |S-TMSI or 40 bits random value identification of the UE |
 |establishmentCause |3 |Indicates type of access (Mobile terminated access, Mobile originating signalling, or data, or Exceptional data, Delay tolerant access) |
 |multiToneSupport |1 |If presents, indicates that the UE supports UL multi-tone transmissions on NPUSCH |
@@ -87,12 +87,12 @@ Signalling Radio Bearers (SRBs) are the Radio Bearers(RBs) that are used by UE f
 
 #### RRCConnectionSetup Message
 |Parameter |Size(Bits) |Meaning |
-|:--       |:--        |:--     |
+|:---       |:---        |:---     |
 |RadioResourceConfigDedicated |Variable |Includes all dedicated configurations for all sub-layers; PDCP, RLC, MAC, and PHY. contains also SRBs and DRBs to be established |
 
 #### RRCConnectionSetupComplete Message
 |Parameter |Size(Bits) |Meaning |
-|:--       |:--        |:--     |
+|:---       |:---        |:---     |
 |s-TMSI |40 |Assigned S-TMSI of the UE |
 |dedicatedInfoNAS |Variable |Carries NAS information piggybacked with this RRC message |
 |up-CIoT-EPS-Optimization |1 |If presents, indicates if the UE supports User plan CIoT Optimization or S1-U data transfer |
@@ -102,7 +102,7 @@ Signalling Radio Bearers (SRBs) are the Radio Bearers(RBs) that are used by UE f
 
 #### SecurityModeCommand Message
 |Parameter |Size(Bits) |Meaning |
-|:--       |:--        |:--     |
+|:---       |:---        |:---     |
 |cipheringAlgorithm |4 |Indicates cipher algorithm to be used for ciphering signalling and data RB |
 |integrityProtAlgorithm |4 |Integrity algorithm to be used for protecting signalling RB |
 
@@ -111,19 +111,19 @@ Signalling Radio Bearers (SRBs) are the Radio Bearers(RBs) that are used by UE f
 
 #### RRCConnectionResumeRequest message
 |Parameter |Size(Bits) |Meaning |
-|:--       |:--        |:--     |
+|:---       |:---        |:---     |
 |resumeID |40 |An ID to identify the AS context of the UE |
 |resumeCause |3 |Indicates type of access (Mobile terminated access, Mobile originating signalling, Data, Exception data, or Delay tolerant access) |
 |shortResumeMAC-I |16 |MAC-I used to identify and verify the UE |
 
 #### RRCConnectionResume Message
 |Parameter |Size(Bits) |Meaning |
-|:--       |:--        |:--     |
+|:---       |:---        |:---     |
 |RadioResourceConfigDedicated |Variable |Includes all dedicated configurations for all sub-layers: PDCP, RLC, MAC, and PHY. Contains also SRBs and DRBs to be resumed |
 
 #### RRCConnectionResumeComplete Message
 |Parameter |Size(Bits) |Meaning |
-|:--       |:--        |:--     |
+|:---       |:---        |:---     |
 |selectedPLMNIdentity |3 |Indicates index of the PLMN selected by the UE from the plmnIdentityList included in SIB1-NB |
 |dedicatedInfoNAS |Variable |Carries NAS information piggybacked with this RRC message |
 
@@ -132,7 +132,7 @@ Signalling Radio Bearers (SRBs) are the Radio Bearers(RBs) that are used by UE f
 
 #### RRCConnectionReconfiguration Message
 |Parameter |Size(Bits) |Meaning |
-|:--       |:--        |:--     |
+|:---       |:---        |:---     |
 |dedicatedInfoNAS |Variable |Carries NAS information piggybacked with this RRC message |
 |RadioResourceConfigDedicated |Includes all dedicated configurations for all sub-layers: PDCP, RLC, MAC, and PHY. Contains also SRBs and DRBs to be reconfigured |
 
@@ -141,13 +141,13 @@ Signalling Radio Bearers (SRBs) are the Radio Bearers(RBs) that are used by UE f
 
 #### RRCConnectionReestablishmentRequest Message
 |Parameter |Size(Bits) |Meaning |
-|:--       |:--        |:--     |
+|:---       |:---        |:---     |
 |ReestablishmentCause |2 |Indicates the failure cause that triggered the re-establishment procedure. Possible values are {reconfigurationFailure, otherFailure} |
 |ue-Identity |S-TMSI |UE identity included to retrieve UE context and at the eNodeB to facilitate contention resolution by lower layers |
 
 #### RRCConnectionReestablishment Message
 |Parameter |Size(Bits) |Meaning |
-|:--       |:--        |:--     |
+|:---       |:---        |:---     |
 |RadioResourceConfigDedicated |Variable |Includes all dedicated configurations for all sub-layers: PDCP, RLC, MAC, and PHY. It also contains SRB and DRB to be established |
 
 #### RRC Connection release
@@ -155,7 +155,7 @@ Signalling Radio Bearers (SRBs) are the Radio Bearers(RBs) that are used by UE f
 
 #### RRCConnectionRelease Message
 |Parameter |Size(Bits) |Meaning |
-|:--       |:--        |:--     |
+|:---       |:---        |:---     |
 |releaseCause |2 |Indicates the reason for releasing the RRC connection. Possible values are {rrc-Suspend, other} |
 |resumeIdentity |40 |An ID to identify the AS context of the UE |
 |redirectedCarrierInfo | 24 |Indicates the carrier frequency and the offset where the UE can search for a suitable cell |
@@ -165,7 +165,7 @@ Signalling Radio Bearers (SRBs) are the Radio Bearers(RBs) that are used by UE f
 
 #### DLInformationTransfer Message
 |Parameter |Size(Bits) |Meaning |
-|:--       |:--        |:--     |
+|:---       |:---        |:---     |
 |dedicatedInfoNAS |Variable |Carries NAS information piggybacked with this RRC message |
 
 #### UL information transfer
@@ -173,7 +173,7 @@ Signalling Radio Bearers (SRBs) are the Radio Bearers(RBs) that are used by UE f
 
 #### ULInformationTransfer Message
 |Parameter |Size(Bits) |Meaning |
-|:--       |:--        |:--     |
+|:---       |:---        |:---     |
 |dedicatedInfoNAS |Variable |Carries NAS information piggybacked with this RRC message |
 
 #### UE capability transfer
@@ -181,7 +181,7 @@ Signalling Radio Bearers (SRBs) are the Radio Bearers(RBs) that are used by UE f
 
 #### UECapabilityInformation Message
 |Parameter |Size(Bits) |Meaning |
-|:--       |:--        |:--     |
+|:---       |:---        |:---     |
 |accessStratumRelease |4 |Indicates the release of the protocol stack. Possible values are {rel13, rel14} |
 |ue-Category-NB |1 |If present, defines UE category NB1 |
 |multipleDRB |1 |If presents, indicates the UE supports multiple DRBs. This parameter is only applicable if the UE supports Data-plane CIoT EPS Optimization. If a UE supports multiple DRBs, the UE shall support two simultaneous DRBs |
@@ -196,7 +196,7 @@ Signalling Radio Bearers (SRBs) are the Radio Bearers(RBs) that are used by UE f
 
 #### T3324 and T3412 extended timer information element
 |Parameter |Size(Bits) |Meaning |
-|:--       |:--        |:--     |
+|:---       |:---        |:---     |
 |Timer information element ID |8 |Timer Information ID |
 |Length of timer contents |8 |Length of timer content of the timer information element |
 |Unit |3 |Can be any of the follow for T3324 Timer:<br/><ul><li>000 value is incremented in multiples of 2 seconds</li><li>001 value is incremented in multiples of 1 minute</li><li>010 value is incremented in multiples of decihours</li><li>111 value indicates that the timer is deactivated</li></ul><br/>Can be any of the follow for T3412:<br/><ul><li>000 value is incremented in multiples of 10 minutes</li><li>001 value is incremented in multiples of 1 hour</li><li>010 value is incremented in multiples of 10 hours</li><li>011 value is incremented in multiples of 2 seconds</li><li>100 value is incremented in multiples of 30 seconds</li><li>101 value is incremented in multiples of 1 minute</li><li>110 value is incremented in multiples of 320 hours</li><li>111 value indicates that the timer is deactivated</li></ul>|
@@ -218,7 +218,7 @@ UE that only supports control-plane CIoT EPS optimization, as defined in [3GPP S
 
 ### 4.2. RRC Configuration Parameters
 |Parameter |Size(bits) |Meaning |
-|:--       |:--        |:--     |
+|:---       |:---        |:---     |
 |esp-BearerIdentity |4 |Indicates the EPS bearer ID |
 |drb-Identity |5 |Indicates the DRB ID used for each DRB established |
 |cipheringAlgorithm |4 |Cipher algorithm to be used for ciphering signalling and data RB |
@@ -243,7 +243,7 @@ Figure 4.6 shows the PDCP data PDU format that carries data PDU. and Figure 4.7 
 PDCP PDU header fields are summarized in below table.
 
 |Field |Meaning |
-|:--   |:--     |
+|:---   |:---     |
 |D/C |If 1, indicates data PDU; If 0, indicates control PDU. |
 |SN |Indicates sequence number. It is 5 bits for SRB and 7 bits for DRB. |
 |Type |If 001, indicates Interspersed RoHC feedback packet. |
@@ -270,7 +270,7 @@ Header compression or decompression applies only to data-plane PDUs.
 
 #### Table 4.3. Header Compression and Decompression Algorithms
 |Profile ID |Transport/Network Layer Protocols |Reference |
-|:--        |:--                               |:--       |
+|:---        |:---                               |:---       |
 |0x0000 |No compression |RFC 5795 |
 |0x0002 |UDP/IP         |RFC 3095, RFC 4815 |
 |0x0003 |ESP/IP         |RFC 3095, RFC 4815 |
@@ -287,7 +287,7 @@ PDCP sublayer receives packets from upper layer (i.e., PDCP SDU), assigns an SN 
 
 #### Table 4.4. State Variables Maintained by a PDCP Entity when Transmitting Data on Uplink
 |State Variable |Initial Value |Meaning |
-|:--            |:--           |:--     |
+|:---            |:---           |:---     |
 |Next_PDCP_TX_SN |0 |Indicates SN to be assigned to the next PDCP PDU to be transmitted for a given PDCP entity |
 |TX_HFN | 0 |Indicates the HFN used for generation of the COUNT value for a given PDCP entity |
 
@@ -303,7 +303,7 @@ PDCP SN wraps around and if a received PDCP SN falls within the window, it will 
 
 ##### Table 4.5. State Variables of a PDCP Entity for DRB Mapped to RLC AM
 |State Variable |Initial Value |Meaning |
-|:--            |:--           |:--     |
+|:---            |:---           |:---     |
 |Last_Submitted_PDCP_RX_SN |127 |The SN of PDCP PDU last submitted to upper layer (IP layer) for a given PDCP entity |
 |Next_PDCP_RX_SN |0 |The SN of next expected PDCP PDU to be received for a given PDCP entity |
 |PDCP SN |0 |The SN of PDCP PDU that is received for a given PDCP entity |
@@ -370,7 +370,7 @@ For the RLC receiver, in order to process RLC PDUs that can arrive out-of-order 
 ##### Table 5.2. RLC UM State Variables
 
 | State Variable | Usage | Initial Value | Meaning |
-|:--             |:--    |:--            |:--      |
+|:---             |:---    |:---            |:---      |
 |UM_Window_Size |Window Size |0  |It is zero for SC-MCCH, SC-MTCH |
 |VR(UH) |Highest received |0 |Indicates the value of the SN following the SN of the RLC PDU with the highest SN among received RLC PDUs, and it serves as the higher edge of the reordering window |
 |VR(UR) |Receive |0 |Indicates the value of the SN of the earliest RLC PDU that is still considered for reordering |
@@ -389,7 +389,7 @@ RLC AM entity maintains a number of state variables for both transmitting and re
 
 ##### Table 5.3. RLC AM State Variables for Transmitter
 | State Variable | Usage | Initial Value | Meaning |
-|:--             |:--    |:--            |:--      |
+|:---             |:---    |:---            |:---      |
 |AM_Window_Size |Window Size |512, 32768 |Determines the transmit window size, a lower edge of VT(A) and an upper edge equal to VT(MS) {"[VT(A) VT(MS)["}, where VT(MS)=VT(A) + AM window size |
 |VT(A) |Acknowledgement |0 |Value of the SN of the next RLC PDU for which a positive ACK is to be received in-sequence. It serves as the lower edge of the transmitting window |
 |VT(MS) |Maximum send |- |Set to VT(A)+AM_Window_Size, and it serves as the higher edge of the transmitting window |
@@ -429,7 +429,7 @@ Table 5.4. shows the state variables used at RLC AM entity acting as a receiver.
 ##### Table 5.4. RLC AM State Variables for Receiver
 
 | State Variable | Usage | Initial Value | Meaning |
-|:--             |:--    |:--            |:--      |
+|:---             |:---    |:---            |:---      |
 |AM_Window_Size |Window size |512, 32768 |Determines the receive window size, a lower edge of VR(R) and an upper edge equal to VR(MR), where VR(MR)=VR(R)+AM window size |
 |VR(R) |Receive |0 |Value of the SN following the last in-sequence completely received RLC PDU, and it serves as the lower edge of the receiving window |
 |VR(MR) |Maximum acceptable receive |0 |Set to VR(R)+AM_Window_Size, and it holds the value of the SN of the first AMD PDU that is beyond the receiving window and serves as the higher edge of the receiving window |
@@ -461,7 +461,7 @@ The PDCP sublayer can request to discard an PDCP PDU or its RLC SDU. In such a c
 #### Table 5.5. RLC PDU Header Fields for UM and AM
 
 | Field | Value | Meaning |
-|:--    |:--    |:--      |
+|:---    |:---    |:---      |
 |D/C |0, 1 |Indicates whether the RLC PDU is an RLC data PDU or RLC control PDU (e.g., STATUS PDU) |
 |RF |0, 1 |Re-segmentation Flag. Indicates whether the RLC PDU contains a single RLC SDU or a segment of an RLC SDU |
 |P |0, 1 |Polling bit. If set, indicates that the transmitter requests an RLC STATUS PDU report from the receiver |

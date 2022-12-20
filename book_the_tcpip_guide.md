@@ -204,7 +204,7 @@ ARP is a relatively simple request-and-reply protocol. The source device broadca
 Figure 13-6. ARP message format
 
 |Field Name |Size (Bytes) |Description |
-|:--        |:--          |:--         |
+|:---        |:---          |:---         |
 |HRD |2 |Hardware Type: This field specifies the type of hardware used for the local network transmitting the ARP message; thus, it also identifies the type of addressing used. Some of the most common values for this field are shown in Table 13-2. |
 |PRO |2 |Protocol Type: This field is the complement of the Hardware Type field, specifying the type of layer 3 addresses used in the message. For IPv4 addresses, this value is 2048 (0800 hex), which corresponds to the EtherType code for IP. |
 |HLN |1 |Hardware Address Length: Specifies how long hardware addresses are in this message. For Ethernet or other networks using IEEE 802 MAC addresses, the value is 6. |
@@ -217,7 +217,7 @@ Figure 13-6. ARP message format
 
 ##### ARP Hard Type(HRD) Field Values
 |Hardware Type (HRD) Value |Hardware Type |
-|:--  |:-- |
+|:---  |:--- |
 |1 |Ethernet (10 Mb) |
 |6 |IEEE 802 Networks |
 |7 |ARCNeT |
@@ -230,7 +230,7 @@ Figure 13-6. ARP message format
 
 ##### ARP Opcode (OP) Field Values
 |Opcode |ARP Message Type |
-|:-- |:-- |
+|:--- |:--- |
 |1 |ARP Request |
 |2 |ARP Reply |
 |3 |RARP Request |
@@ -316,7 +316,7 @@ Figure 16-5. Multihomed devices on an IP internetwork This internetwork consists
 ### IP Classful Addressing Overview and Address Classes
 #### IP Address Classes and Class Characteristics and Uses
 |IP Address Class |Fraction of Total IP Address Space |Number of Network ID Bits |Number of Host ID Bits |Intended Use |
-|:-- |:-- |:-- |:-- |:-- |
+|:--- |:--- |:--- |:--- |:--- |
 |Class A |1/2 |8 |24 |Unicast addressing for very large organizations with hundreds of thousands or millions of hosts to connect to the Internet |
 |Class B |1/4 |16 |16 |Unicast addressing for medium to large organizations with many hundreds to thousands of hosts to connect to the Internet |
 |Class C |1/8 |24 |8 |Unicast addressing for smaller organizations with no more than about 250 hosts to connect to the Internet |
@@ -334,7 +334,7 @@ Figure 17-2. Class determination algorithm for classful IP addresses The simplic
 
 #### IP Address Class Bit Patterns, First-Octet Ranges, and Address Ranges
 |IP Address Class |First Octet of IP Address |Lowest Value of First Octet (Binary) |Highest Value of First Octet (Binary) |Range of First Octet Values (Decimal) |Octets in Network ID/Host ID |Theoretical IP Address Range |
-|:-- |:-- |:-- |:-- |:-- |:-- |:-- |
+|:--- |:--- |:--- |:--- |:--- |:--- |:--- |
 |Class A |0xxx xxxx |0000 0001 |0111 1110 |1 to 126 |1 / 3 |1.0.0.0 to 126.255.255.255 |
 |Class B |10xx xxxx |1000 0000 |1011 1111 |128 to 191 |2 / 2 |128.0.0.0 to 191.255.255.255 |
 |Class C |110x xxxx |1100 0000 |1101 1111 |192 to 223 |3 / 1 |192.0.0.0 to 223.255.255.255 |
@@ -350,7 +350,7 @@ In the classful IP addressing scheme, the class of an IP address is identified b
 
 #### IP Address Class Network and Host Capacities
 |IP Address Class |Total # of Bits for Network ID/Host ID |First Octet of IP Address |# of Network ID Bits Used To Identify Class |Usable # of Network ID Bits |Number of Possible Network IDs |# of Host IDs Per Network ID |
-|:-- |:-- |:-- |:-- |:-- |:-- |:-- |
+|:--- |:--- |:--- |:--- |:--- |:--- |:--- |
 |Class A |8/24 |0xxx xxxx |1 |8-1 = 7 |27-2 = 126 |224-2 = 16,277,214 |
 |Class B |16/16 |10xx xxxx |2 |16-2 = 14 |214 = 16,384 |216-2 = 65,534
 |Class C |24/8 |110x xxxx |3 |24-3 = 21 |221 = 2,097,152 |28-2 = 254 |
@@ -362,7 +362,7 @@ When the network ID or host ID of an IP address is replaced by a pattern of all 
 
 ##### IP Address Patterns with Special Meanings
 |Network ID |Host ID |Class A Example |Class B Example |Class C Example |Special Meaning and Description |
-|:-- |:-- |:-- |:-- |:-- |:-- |
+|:--- |:--- |:--- |:--- |:--- |:--- |
 |Network ID |Host ID |77.91.215.5 |154.3.99.6 |227.82.157.160 |Normal Meaning: Refers to a specific device. |
 |Network ID |All Zeros |77.0.0.0 |154.3.0.0 |227.82.157.0 |The Specified Network: This notation, with a 0 at the end of the address, refers to an entire network. |
 |All Zeros |Host ID |0.91.215.5 |0.0.99.6 |0.0.0.160 |Specified Host on This Network: This addresses a host on the current or default network when the network ID is not known or when it doesn't need to be explicitly stated. |
@@ -382,7 +382,7 @@ Portions of the IP address space are set aside for reserved, private, and loopba
 
 ##### IP Multicast Address Ranges and Uses
 |Range Start Address |Range End Address |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |224.0.0.0 |224.0.0.255 |Reserved for special well-known multicast addresses |
 |224.0.1.0 |238.255.255.255 |Globally scoped (Internetwide) multicast addresses. |
 |239.0.0.0 |239.255.255.255 |Administratively scoped (local) multicast addresses |
@@ -392,7 +392,7 @@ Figure 17-4. IP Multicast address ranges and uses All multicast addresses begin 
 
 ##### Well-Known Multicast Addresses
 |Range Start Address |Description |
-|:-- |:-- |
+|:--- |:--- |
 |224.0.0.0 |Reserved; not used |
 |224.0.0.1 |All devices on the subnet |
 |224.0.0.2 |All routers on the subnet |
@@ -456,7 +456,7 @@ Figure 21-1. IP datagram encapsulation The upper-layer message is packaged into 
 ### IP Datagram General Format
 #### Internet Protocol Version 4 (IPv4) Datagram Format
 |Field Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Version |1/2 (4 bits) |Identifies the version of IP used to generate the datagram. For IPv4, this is the number 4. This field ensures compatibility between devices that may be running different versions of IP. In general, a device running an older version of IP will reject datagrams created by newer implementations, under the assumption that the older version may not be able to interpret the newer datagram correctly. |
 |IHL |1/2 (4 bits) |Specifies the length of the IP header, in 32-bit words. This includes the length of any options fields and padding. The normal value of this field when no options are used is 5 (5 32-bit words = 5*4 = 20 bytes). Contrast this with the longer Total Length field in this table. |
 |TOS |1 |A field designed to carry information to provide quality-of-service features, such as prioritized delivery for IP datagrams. This has not been as widely used as originally defined, and its meaning has been redefined for use by a technique called Differentiated Services (DS), as discussed in the "IP Datagram Type of Service (TOS) Field" section of this chapter. |
@@ -475,7 +475,7 @@ Figure 21-1. IP datagram encapsulation The upper-layer message is packaged into 
 
 #### IPv4 Flags Subfields
 |Value (Hexadecimal) |Value (Decimal) |Protocol |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |00 |0 |Reserved |
 |01 |1 |ICMP |
 |02 |2 |IGMP |
@@ -492,7 +492,7 @@ IPv4 datagram format This diagram shows the all-important IPv4 datagram format. 
 
 #### Original Definition of IPv4 Type of Service (TOS) Field
 |Subfield Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Precedence |3/8 (3 bits) |A field indicating the priority of the datagram. There were eight defined values, from lowest to highest priority:<ul><li>000: Routine<li/><li>001: Priority</li><li>010: Immediate</li><li>011: Flash</li><li>100: Flash Override</li><li>101: CRITIC/ECP</li><li>110: Internetwork Control</li><li>111: Network Control</li></ul> |
 |D |1/8 (1 bit) |Set to 0 to request normal delay in delivery; set to 1 if a low delay delivery is requested. |
 |T |1/8 (1 bit) |Set to 0 to request normal delivery throughput; set to 1 if higher throughput delivery is requested. |
@@ -503,14 +503,14 @@ IPv4 datagram format This diagram shows the all-important IPv4 datagram format. 
 
 #### IPv4 Option Format
 |Subfield Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Option Type |1 |The Option Type subfield is divided into three subsubfields. |
 |Option Length |0 or 1 |For variable-length options, indicates the size of the entire option, including all three subfields shown here, in bytes. |
 |Option Data |0 or variable |For variable-length options, contains data to be sent as part of the option. |
 
 #### IPv4 Options: Option Type Subfields
 |Sub-Subfield Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Copied Flag |1/8 (1 bit) |This bit is set to 1 if the option is intended to be copied into all fragments when a datagram is fragmented; it is cleared to 0 if the option should not be copied into fragments. |
 |Option Class |2/8 (2 bits) |Specifies one of four potential values that indicate the general category into which the option belongs. In fact, only two of the values are used: 0 is for Control options, and 2 for Debugging and Measurement. |
 |Option Number |5/8 (5 bits) |Specifies the kind of option. 32 different values can be specified for each of the two option classes. Of these, a few are more commonly employed. |
@@ -600,7 +600,7 @@ With dynamic mapping, global and local address representations are generated aut
 ## IP NAT Unidirectional (Traditional/Outbound) Operation
 ### Operation of Unidirectional (Traditional/Outbound) NAT
 |Step # |Description |Datagram Type |Datagram Source Address |Datagram Destination Address |
-|:-- |:-- |:-- |:-- |:-- |
+|:--- |:--- |:--- |:--- |:--- |
 |1 |Inside Client Generates Request and Sends to NAT Router: Device 10.0.0.207 generates an HTTP request that is eventually passed down to IP and encapsulated in an IP datagram. The source address is itself, 10.0.0.207, and the destination is 204.51.16.12. The datagram is sent to the NAT-capable router that connects the organization's internal network to the Internet. |Request (from inside client to outside server) |10.0.0.207 (inside local) |204.51.16.12 (outside local) |
 |2 |NAT Router Translates Source Address and Sends to Outside Server: The NAT router realizes that 10.0.0.207 is an inside local address and knows it must substitute an inside global address in order to let the public Internet destination respond. It consults its pool of addresses and sees the next available one is 194.54.21.11. It changes the source address in the datagram from 10.0.0.207 to 194.54.21.11. The destination address is not translated in traditional NAT. In other words, the outside local address and outside global address are the same. |The NAT router puts the mapping from 10.0.0.207 to 194.54.21.11 into its translation table. It sends out the modified datagram, which is eventually routed to the server at 204.51.16.12. |194.54.21.11 (inside global) 204.51.16.12 (outside global) |
 |3 |Outside Server Generates Response and Sends Back to NAT Router: The server at 204.51.16.12 generates an HTTP response. It has no idea that NAT was involved; it sees 194.54.21.11 in the request sent to it, so that's where it sends back the response. It is then routed back to the original client's NAT router. |Response (from outside server to inside client) |204.51.16.12 (outside global) |194.54.21.11 (inside global) |
@@ -632,7 +632,7 @@ Figure 28-4. Operation of Port-Based (overloaded) NAT This figure is very simila
 ### IP NAT Overlapping/Twice NAT Operation
 #### Operation of Overlapping NAT/Twice NAT
 |Step # |Description |Datagram Type |Datagram Source Address |Datagram Destination Address |
-|:-- |:-- |:-- |:-- |:-- |
+|:--- |:--- |:--- |:--- |:--- |
 |1 |Inside Client Generates Request and Sends to NAT Router: Device 18.0.0.18 generates a request using the destination 172.16.44.55, which it got from the (NAT-intercepted) DNS query for www.twicenat.mit.edu. The datagram is sent to the NAT router for the local network. |Request (from inside client to outside server) |18.0.0.18 (inside local) |172.16.44.55 (outside local) |
 |2 |NAT Router Translates Source Address and Destination Address and Sends to Outside Server: The NAT router makes two translations. First, it substitutes the 18.0.0.18 address with a publicly registered address, which is 194.54.21.12 for this example. It then translates the bogus 172.16.44.55 back to the real MIT address for www.twicenat.mit.edu. It routes the datagram to the outside server. | |194.54.21.12 (inside global) |18.1.2.3 (outside global) |
 |3 |Outside Server Generates Response and Sends Back to NAT Router: The MIT server at 18.1.2.3 generates a response and sends it back to 194.54.21.12, which causes it to arrive back at the NAT router. |Response (from outside server to inside client) |18.1.2.3 (outside global) |194.54.21.12 (inside global) |
@@ -677,7 +677,7 @@ Figure 30-4. Mobile IP Mobility Agent Advertisement Extension format This extens
 
 #### Mobile IP Mobility Agent Advertisement Extension Format
 |Field Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Type |1 |Identifies the Agent Advertisement extension type. For the Mobility Agent Advertisement Extension, it is set to 16. |
 |Length |1 |Length of the extension in bytes, excluding the Type and Length fields. Thus, it is equal to 6 plus 4 for each care-of address in the message. |
 |Sequence Number |2 |A sequential counter is set to zero when the router initializes and then incremented for each advertisement sent out. |
@@ -688,7 +688,7 @@ Figure 30-4. Mobile IP Mobility Agent Advertisement Extension format This extens
 
 #### Mobile IP Mobility Agent Advertisement Extension Flags
 |Subfield Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |R |1/8 (1 bit) |Registration Required: The mobile node must register through the foreign agent, even when using a co-located care-of address. |
 |B |1/8 (1 bit) |Busy: The agent is currently too busy to accept further registrations from mobile nodes. |
 |H |1/8 (1 bit) |Home Agent: The agent is willing to function as a home agent on this link (it will forward datagrams, and so on). Note that a device can offer services as both a home agent and a foreign agent. |
@@ -712,7 +712,7 @@ Mobile IP home agent registration is the process by which a mobility binding is 
 
 #### Mobile IP Registration Request Message Format
 |Field Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Type |1 |Identifies the registration message type. For a request, this field is 1. |
 |Flags |1 |A one-byte field containing several informational flags that convey specific requests that are being made by the mobile node to the home agent. When set, the flags conveys the meanings shown in Table 30-5. |
 |Lifetime |2 |Length of time, in seconds, that the mobile node requests from the home agent for this registration. | 
@@ -724,7 +724,7 @@ Mobile IP home agent registration is the process by which a mobility binding is 
 
 #### Registration Request Flags
 |Subfield Name |Size (Bytes) |Description
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |S |1/8 (1 bit) |Simultaneous Bindings: Mobile node requests that prior mobility bindings be retained in addition to the one in the current request. |
 |B |1/8 (1 bit) |Broadcast Datagrams: Mobile node requests that broadcasts on the home network be forwarded to it. |
 |D |1/8 (1 bit) |Decapsulation by Mobile Node: Mobile node is telling the home agent that it will itself decapsulate encapsulated datagrams, as opposed to a foreign agent. In other words, when this is one, the mobile node is using a co-located care-of address; when zero, it is using a foreign agent care-of address. |
@@ -739,7 +739,7 @@ Figure 30-6. Mobile IP Registration Request message format This message is carri
 
 #### Mobile IP Registration Reply Message Format
 |Field Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Type |1 |Identifies the registration message type. For a reply, this field is 3. |
 |Code |1 |Indicates the result of the registration request. This field is set to 0 if the registration was accepted, 1 if it was accepted but simultaneous bindings were requested and are not supported. If the registration was denied, a different reason code is provided that indicates the reason for the rejection, as well as whether it was the home agent or foreign agent that denied it. |
 |Lifetime |2 |If the registration was accepted, this represents the length of time in seconds until the registration expires. This may be a different value than the mobile node requested. |
@@ -920,7 +920,7 @@ RIP-1 was the first version of RIP and is the simplest in terms of operation and
 
 ##### RIP-1 Message Format
 |Field Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Command |1 |Command Type: Identifies the type of RIP message being sent. A value of 1 indicates an RIP Request, while 2 means an RIP Response. Originally, three other values and commands were also defined: 3 and 4 for the Traceon and Traceoff commands, and 5, which was reserved for use by Sun Microsystems. These are obsolete and no longer used. |
 |Version |1 |Version Number: Set to 1 for RIP version 1. |
 |Must Be Zero |2 |Field reserved; value must be set to all zeros. |
@@ -928,7 +928,7 @@ RIP-1 was the first version of RIP and is the simplest in terms of operation and
 
 ##### RIP-1 RIP Entries
 |Subfield Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Address Family Identifier |2 |A fancy name for a field that identifies the type of address in the entry. The routers are using IP addresses, for which this field value is 2. |
 |Must Be Zero |2 |Field reserved; value must be set to all zeros. |
 |IP Address |4 |The address of the route the routers are sending information about. No distinction is made between addresses of different types of devices in RIP, so the address can be for a network, a subnet, or a single host. It is also possible to send an address of all zeros, which is interpreted as the default route for other devices on the network to use for reaching routes with no specified routing entries. This is commonly used to allow a network to access the Internet. |
@@ -944,7 +944,7 @@ RIP-2 is the most recent version of RIP used in IPv4. It includes a number of en
 
 ##### RIP-2 Message Format
 |Field Name  |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Command |1 |Command Type: Identifies the type of RIP message being sent. A value of 1 indicates an RIP Request, while 2 means an RIP Response. |
 |Version |1 |Version Number: Set to 2 for RIP version 2. |
 |Must Be Zero |2 |Field reserved; value must be set to all zeros. |
@@ -952,7 +952,7 @@ RIP-2 is the most recent version of RIP used in IPv4. It includes a number of en
 
 ##### RIP-2 Route Table Entries (RTEs)
 |Subfield Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Address Family Identifier |2 |Same meaning as for RIP-1; value is 2 to identify IP addresses. |
 |Route Tag |2 |Additional information to be carried with this route. |
 |IP Address |4 |Same as in RIP-1: the address of the route the router is sending information about. No distinction is made between the address of different types of devices in RIP, so the address can be for a network, a subnet, or a single host. It is also possible to send an address of all zeros, which is interpreted as the default route, as in RIP-1. |
@@ -968,7 +968,7 @@ RIPng is the version of RIP that was developed for use on IPv6 internetworks. It
 
 ##### RIPng Message Format
 |Field Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Command |1 |Command Type: Identifies the type of RIPng message being sent. A value of 1 indicates an RIPng Request, while 2 means an RIPng Response.a |
 |Version |1 |Version Number: Set to 1 (not 6, since this is the first version of the new protocol RIPng). |
 |Must Be Zero |2 |Field reserved; value must be set to all zeros. |
@@ -976,7 +976,7 @@ RIPng is the version of RIP that was developed for use on IPv6 internetworks. It
 
 ##### RIPng RTEs
 |Subfield Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |IPv6 Prefix |16 |The 128-bit IPv6 address of the network whose information is contained in this RTE. |
 |Route Tag |2 |Additional information to be carried with this route, as defined in RIP-2. |
 |Prefix Len |1 |The number of bits of the IPv6 address that is the network portion (the remainder being the host portion). This is the number that normally would appear after the slash when specifying an IPv6 network address. It is analogous to an IPv4 subnet mask. See the description of IPv6 prefix notation in Chapter 25 for more details. |
@@ -1019,7 +1019,7 @@ The operation of OSPF involves five message types. Hello messages establish cont
 ### OSPF Message Formats
 #### OSPF Common Header Format
 |Field Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Version # |1 |Set to 2 for OSPF version 2.
 |Type |1 |Indicates the type of OSPF message: <br/><ul><li>1 = Hello</li><li>2 = Database Description</li><li>3 = Link State Request</li><li>4 = Link State Update</li><li>5 = Link State Acknowledgment</li></ul>|
 |Packet Length |2 |The length of the message, in bytes, including the 24 bytes of this header. |
@@ -1034,7 +1034,7 @@ Figure 39-6. OSPF common header format Following this header, the body of the me
 
 #### OSPF Hello Message Format
 |Field Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Network Mask |4 |The subnet mask of the network the router is sending to. |
 |Hello Interval |2 The number of seconds this router waits between sending Hello messages. |
 |Options |1 |Indicates which optional OSPF capabilities the router supports. |
@@ -1049,7 +1049,7 @@ Figure 39-7. OSPF Hello message format
 
 #### OSPF Database Description Message Format
 |Field Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Interface MTU |2 |The size of the largest IP message that can be sent on this router's interface without fragmentation. |
 |Options |1 |Indicates which of several optional OSPF capabilities the router supports. |
 |Flags |1 |Special flags used to indicate information about the exchange of Database Description messages, as shown in the below table. |
@@ -1058,7 +1058,7 @@ Figure 39-7. OSPF Hello message format
 
 #### OSPF Database Description Message Flags
 |Subfield Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Reserved |5/8 (5 bits) |Reserved: Sent and received as zero. |
 |I |1/8 (1 bit) |I-Bit: Set to 1 to indicate that this is the first (initial) in a sequence of Database Description messages. |
 |M |1/8 (1 bit) |M-Bit: Set to 1 to indicate that more Database Description messages follow this one. |
@@ -1069,7 +1069,7 @@ Figure 39-8. OSPF Database Description message format
 
 #### OSPF Link State Request Message Format
 |Field Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |LS Type |4 |The type of LSA being sought. |
 |Link State ID |4 |The identifier of the LSA, usually the IP address of either the router or network linked. |
 |Advertising Router |4 |The ID of the router that created the LSA whose update is being sought. |
@@ -1079,7 +1079,7 @@ Figure 39-9. OSPF Link State Request Message format
 
 #### OSPF Link State Update Message Format
 |Field Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |#LSAs |4 |The number of LSAs included in this message. |
 |LSAs |Variable |One or more LSAs. See the "OSPF Link State Advertisements and the LSA Header Format" section later in this chapter for more details. |
 
@@ -1088,7 +1088,7 @@ Figure 39-10. OSPF Link State Update message format
 
 #### OSPF Link State Acknowledgment Message Format
 |Field Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |LSA Headers |Variable |Contains LSA headers that identify the LSAs acknowledged. |
 
 ![](./img/2021-12-28-10.png)
@@ -1096,7 +1096,7 @@ Figure 39-11. OSPF Link State Acknowledgment message format
 
 #### OSPF Link State Advertisements and the LSA Header Format
 |Subfield Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |LS Age |2 |The number of seconds elapsed since the LSA was created. |
 |Options |1 |Indicates which of several optional OSPF capabilities the router supports. |
 |LS Type |1 |Indicates the type of link this LSA describes, as shown in Table 39-12.
@@ -1136,7 +1136,7 @@ Unlike simpler routing protocols that store only limited information about how t
 
 #### Summary of BGP Path Attributes
 |BGP Path Attribute |Classification |Attribute Type Value |Description |
-|:-- |:-- |:-- |:-- |
+|:--- |:--- |:--- |:--- |
 |Origin |Well-Known Mandatory |1 |Specifies the origin of the path information. This attribute indicates whether the path came originally from an interior routing protocol, the older exterior routing protocol, or some other source. |
 |AS_Path |Well-Known Mandatory |2 |A list of AS numbers that describes the sequence of ASes through which this route description has passed. This is a critically important attribute, since it contains the actual path of ASes to the network. It is used to calculate routes and to detect routing loops. |
 |Next_Hop |Well-Known Mandatory |3 |The next-hop router to be used to reach this destination. |
@@ -1157,7 +1157,7 @@ BGP is implemented through the exchange of four different message types between 
 
 #### BGP General Message Format
 |Field Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Marker |16 |This large field at the start of each BGP message is used for synchronization and authentication. |
 |Length |2 |The total length of the message in bytes, including the fields of the header. The minimum value of this field is 19 for a Keepalive message; it may be as high as 4096. |
 |Type |1 |Indicates the BGP message type:<br/><ul><li>1 = Open</li><li>2 = Update</li><li>3 = Notification</li><li>4 = Keepalive</li></ul>|
@@ -1170,7 +1170,7 @@ All four BGP message types use a general message format that contains three fixe
 
 #### BGP Open Message Format
 |Field Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Marker |16 |This large field at the start of each BGP message is used for synchronization and authentication. |
 |Length |2 |The total length of the message in bytes, including the fields of the header. Open messages are variable in length. |
 |Type |1 |BGP message type; value is 1 for Open messages. |
@@ -1183,7 +1183,7 @@ All four BGP message types use a general message format that contains three fixe
 
 #### BGP Open Message Optional Parameters
 |Subfield Name | |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Parm Type |1 |Parameter Type: The type of the optional parameter. At present, only one value is defined, 1, for Authentication Information. |
 |Parm Length |1 |Parameter Length: Specifies the length of the Parameter Value subfield (thus, this value is the length of the entire parameter, less 2). |
 |Parm Value |Variable |Parameter Value: The value of the parameter being communicated. |
@@ -1195,7 +1195,7 @@ Figure 40-3. BGP Open message format
 
 #### BGP Update Message Format
 |Field Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Marker |16 |This large field at the start of each BGP message is used for synchronization and authentication. |
 |Length |2 |The total length of the message in bytes, including the fields of the header. Update messages are variable in length. |
 |Type |1 |BGP message type; value is 2 for Update messages. |
@@ -1207,7 +1207,7 @@ Figure 40-3. BGP Open message format
 
 #### BGP Update Message Path Attributes
 |Subfield Name | |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Attribute Type |2 |Defines the type of attribute and describes it. This subfield itself has a two-level substructure, with Attribute Type flags and Attribute Type codes, so it won't even fit it here! |
 |Attribute Length |1 or 2 |The length of the attribute in bytes. This field is normally 1 byte, thereby allowing for fields with a length up to 255 bytes. For longer attributes, the Extended Length flag is set (see Table 40-9), indicating that this Attribute Length field is 2 bytes, for attributes up to 65,535 bytes. |
 |Attribute Value |Variable |The value of the attribute. The size and meaning of this field depends on the type of path attribute. For example, for an Origin attribute, it is a single integer value indicating the origin of the route; for an AS_Path attribute, this field contains a variable-length list of the ASes in the path to the network. |
@@ -1217,7 +1217,7 @@ Figure 40-4. BGP Update message format This diagram shows the complete BGP Updat
 
 #### BGP Update Message Attribute Flags
 |Sub-Sub-Subfield Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Optional |1/8 (1 bit) |Set to 1 for optional attributes; 0 for well-known attributes. |
 |Transitive |1/8 (1 bit) |Set to 1 for optional transitive attributes; 0 for optional nontransitive attributes. Always set to 1 for well-known attributes. |
 |Partial |1/8 (1 bit) |When 1, indicates that information about an optional transitive attribute is partial. This means that since it was optional and transitive, one or more of the routers that passed the path along did not implement that attribute but was forced to pass it along, so information about it may be missing (not supplied by the routers that didn't recognize it but just passed along). If 0, it means information is complete. This bit has meaning only for optional transitive attributes; for well-known or nontransitive attributes, it is 0. |
@@ -1226,7 +1226,7 @@ Figure 40-4. BGP Update message format This diagram shows the complete BGP Updat
 
 #### BGP Update Message Attribute Type Codes
 |Value |Attribute Type |
-|:-- |:-- |
+|:--- |:--- |
 |1 |Origin |
 |2 |AS_Path |
 |3 |Next_Hop |
@@ -1239,7 +1239,7 @@ The most important message type in BGP is the Update message, which is used to s
 
 #### BGP Keepalive Message Format
 |Field Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Marker |16 |This large field at the start of each BGP message is used for synchronization and authentication. |
 |Length |2 |The total length of the message in bytes, including the fields of the header. Keepalive messages are fixed in length at 19 bytes.
 |Type |1 |BGP message type; value is 4 for Keepalive messages. |
@@ -1251,7 +1251,7 @@ BGP Keepalive messages are sent periodically during idle periods when no real in
 
 #### BGP Notification Message Format
 |Field Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Marker |16 |This large field at the start of each BGP message is used for synchronization and authentication. |
 |Length |2 |The total length of the message in bytes, including the fields of the header. Notification messages are variable in length. |
 |Type |1 |BGP message type; value is 3 for Notification messages. |
@@ -1264,7 +1264,7 @@ Figure 40-6. BGP Notification message format
 
 #### BGP Notification Message Error Codes
 |Error Code Value |Code Name |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |1 |Message Header Error |A problem was detected either with the contents or length of the BGP header. The Error Subcode field provides more details on the nature of the problem. |
 |2 |Open Message Error |A problem was found in the body of an Open message. The Error Subcode field describes the problem in more detail. Note that authentication failures or the inability to agree on a parameter such as hold time are included here. |
 |3 |Update Message Error |A problem was found in the body of an Update message. Again, the Error Subcode field provides more information. Many of the problems that fall under this code are related to issues detected in the routing data or path attributes sent in the Update message, so these messages provide feedback about such problems to the device sending the erroneous data. |
@@ -1274,7 +1274,7 @@ Figure 40-6. BGP Notification message format
 
 #### BGP Notification Message Error Subcodes
 |Error Type |Error Subcode Value |Subcode Name |Description |
-|:-- |:-- |:-- |:-- |
+|:--- |:--- |:--- |:--- |
 |Message Header Error (Error Code 1) |1 |Connection Not Synchronized |The expected value in the Marker field was not found, indicating that the connection has become unsynchronized. See the description of the Marker field in BGP Notification Message Format. |
 | |2 |Bad Message Length |The message was less than 19 bytes, greater than 4096 bytes, or not consistent with what was expected for the message type. |
 | |3 |Bad Message Type |The Type field of the message contains an invalid value. |
@@ -1321,7 +1321,7 @@ Most typical applications, especially ones that send files or messages, require 
 
 ### Summary Comparison of UDP and TCP
 |Characteristic/Description |UDP |TCP |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |General Description |Simple, high-speed, low-functionality wrapper that interfaces applications to the network layer and does little else |Full-featured protocol that allows applications to send data reliably without worrying about network layer issues |
 |Protocol Connection Setup |Connectionless; data is sent without setup |Connection-oriented; connection must be established prior to transmission |
 |Data Interface to Application |Message-based; the application sends data in discrete packages |Stream-based; the application sends data with no particular structure |
@@ -1370,7 +1370,7 @@ Each device may have multiple TCP connections active at any given time. Each con
 
 #### Common TCP/IP Well-Known Port Numbers and Applications
 |Port# |TCP/UDP |Keyword |Protocol Abbreviation |Application or Protocol Name/Comments |
-|:-- |:-- |:-- |:-- |:-- |
+|:--- |:--- |:--- |:--- |:--- |
 |7 |TCP + UDP |echo |— |Echo Protocol |
 |9 |TCP + UDP |discard |— |Discard Protocol |
 |11 |TCP + UDP |systat |— |Active Users Protocol |
@@ -1418,7 +1418,7 @@ Figure 44-1. UDP message format
 
 #### Table 44-1. UDP Message Format
 |Field Name |Size (Bytes) |Description |
-|:-- |:-- |:== |
+|:--- |:--- |:== |
 |Source Port |2 |The 16-bit port number of the process that originated the UDP message on the source device. This will normally be an ephemeral (client) port number for a request that a client sends to a server or a well-known/registered (server) port number for a reply that a server sends to a client. (See Chapter 43 for details.) |
 |Destination Port |2 |The 16-bit port number of the process that is the ultimate intended recipient of the message on the destination device. This will usually be a well-known/registered (server) port number for a client request or an ephemeral (client) port number for a server reply. (See Chapter 43 for details.) |
 |Length |2 |The length of the entire UDP datagram, including both header and Data fields. |
@@ -1435,7 +1435,7 @@ A protocol uses UDP instead of TCP in two situations. The first is when an appli
 
 #### Table 44-2. Common UDP Applications and Server Port Assignments
 |Port# |Keyword |Protocol |Comments |
-|:-- |:-- |:-- |:-- |
+|:--- |:--- |:--- |:--- |
 |53 |domain |Domain Name Server (DNS) |Uses a simple request/reply messaging system for most exchanges (but also uses TCP for longer ones). |
 |67 and 68 |bootps/bootpc |Bootstrap Protocol (BOOTP) and Dynamic Host Configuration Protocol (DHCP) |Host configuration protocols that consist of short request and reply exchanges. |
 |69 |tftp |Trivial File Transfer Protocol (TFTP) |TFTP is a great example of a protocol that was specifically designed for UDP, especially when you compare it to regular FTP. The latter protocol uses TCP to establish a session between two devices and then makes use of its own large command set and TCP's features in order to ensure the reliable transfer of possibly very large files. In contrast, TFTP is designed for the quick and easy transfer of small files. To avoid file corruption, TFTP includes simple versions of some of TCP's features, such as acknowledgments. |
@@ -1449,7 +1449,7 @@ The primary transport layer protocol in the TCP/IP protocol suite is the Transmi
 ### TCP Standards
 #### Table 45-1. Supplementary TCP Standards
 |RFC # |Name |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |813 |Window and Acknowledgment Strategy in TCP |Discusses the TCP sliding window acknowledgment system, describes certain problems that can occur with it, and offers methods to correct them. |
 |879 |The TCP Maximum Segment Size and Related Topics |Discusses the important maximum segment size (MSS) parameter that controls the size of TCP messages, and then relates this parameter to IP datagram size. |
 |896 |Congestion Control in IP/TCP Internetworks |Talks about congestion problems and how you can use TCP to handle them. Note the interesting inversion of the normal protocol suite name: IP/TCP. |
@@ -1514,7 +1514,7 @@ Each device can handle simultaneous TCP connections to many different processes 
 ### TCP Common Applications and Server Port Assignments
 #### Table 46-1. Common TCP Applications and Server Port Assignments
 |Port# |Keyword |Protocol |Comments |
-|:-- |:-- |:-- |:-- |
+|:--- |:--- |:--- |:--- |
 |20 and 21 |ftp-data/ftp |File Transfer Protocol (FTP, data and control) |Used to send large files, so it is ideally suited for TCP. |
 |23 |telnet |Telnet Protocol |Interactive session-based protocol. Requires the connection-based nature of TCP. |
 |25 |smtp |Simple Mail Transfer Protocol (SMTP) |Uses an exchange of commands, and sends possibly large files between devices. |
@@ -1537,7 +1537,7 @@ Many computer scientists use the finite state machine (FSM) to describe the oper
 
 #### Table 47-1. TCP Finite State Machine (FSM) States, Events, and Transitions
 |State |State Description |Event and Transition |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |CLOSED |The default state that each connection starts in before the process of establishing it begins. The state is called "fictional" in the standard because this state represents the situation in which there is no connection between devices. It either hasn't been created yet or has just been destroyed (if that makes sense). |Passive Open: A server begins the process of connection setup by doing a passive open on a TCP port. At the same time, it sets up the data structure (transmission control block, or TCB) that it needs in order to manage the connection. It then transitions to the LISTEN state. |
 | | |Active Open, Send SYN: A client begins the connection setup by sending a SYN message, and it sets up a TCB for this connection. It then transitions to the SYN-SENT state. |
 |LISTEN |A device (normally a server) is waiting to receive a SYN message from a client. It has not yet sent its own SYN message. |Receive Client SYN, Send SYN+ACK: The server device receives a SYN from a client. It sends back a message that contains its own SYN and acknowledges the one it received. The server moves to the SYN-RECEIVED state. |
@@ -1568,7 +1568,7 @@ The normal process of establishing a connection between a TCP client and server 
 #### Table 47-2. TCP Three-Way Handshake Connection Establishment Procedure
 
 |Client | | |Server | | |
-|:-- |:-- |:-- |:-- |:-- |:-- |
+|:--- |:--- |:--- |:--- |:--- |:--- |
 |Start State |Action |Move to State |Start State |Action |Move to State |
 |CLOSED |The client cannot do anything until the server has performed a passive Open and is ready to accept a connection. |—  |CLOSED |The server performs a passive Open, creating a TCB for the connection and readying itself for the receipt of a connection request (SYN) from a client. |LISTEN |
 |CLOSED |Step 1 Transmit: The client performs an active Open, creating a TCB) for the connection and sending a SYN message to the server. |SYN-SENT |LISTEN |The server waits for contact from a client. |— |
@@ -1582,7 +1582,7 @@ Figure 47-2. TCP three-way handshake connection establishment procedure This dia
 
 #### Table 47-3. TCP Simultaneous Open Connection Establishment Procedure
 |Client A | | |Client B | | |
-|:-- |:-- |:-- |:-- |:-- |:-- |
+|:--- |:--- |:--- |:--- |:--- |:--- |
 |Start State |Action |Move to State |Start State |Action |Move to State |
 |CLOSED |Client A Step 1 Transmit: Client A performs an active Open, creating a TCB and sending a SYN to the server. |SYN-SENT |CLOSED |Client B Step 1 Transmit: Client B performs an active Open, creating a TCB and sending a SYN to the server. |SYN-SENT |
 |SYN-SENT |Client B Step 1 Receive and Step 2 Transmit: Client A receives Client B's SYN and sends it an ACK. It is still waiting for an ACK to its own SYN. |SYN-RECEIVED |SYN-SENT |Client A Step 1 Receive and Step 2 Transmit: Client B receives Client A's SYN and sends it an ACK. It is still waiting for an ACK to its own SYN. |SYN-RECEIVED |
@@ -1607,7 +1607,7 @@ A TCP connection is terminating using a special procedure by which each side ind
 
 #### Table 47-4. TCP Connection Termination Procedure
 |Client | | |Server | | |
-|:-- |:-- |:-- |:-- |:-- |:-- |
+|:--- |:--- |:--- |:--- |:--- |:--- |
 |Start State |Action |Transitions to State |Start State |Action |Transitions to State |
 |ESTABLISHED |Client Close Step 1 Transmit: The application using TCP signals that the connection is no longer needed. The client TCP sends a segment with the FIN bit set to request that the connection be closed. |FIN-WAIT-1 |ESTABLISHED |At this stage the server is still in normal operating mode. |— |
 |FIN-WAIT-1 |The client, having sent a FIN, is waiting for a device to acknowledge it and for the server to send its own FIN. In this state, the client can still receive data from the server but will no longer accept data from its local application to be sent to the server. |— |ESTABLISHED |Client Close Step 1 Receive and Step 2 Transmit: The server receives the client's FIN. It sends an ACK to acknowledge the FIN. The server must wait for the application using it to be told that the other end is closing, so the application here can finish what it is doing. |CLOSE-WAIT |
@@ -1623,7 +1623,7 @@ Figure 47-5. TCP connection termination procedure This diagram shows the convent
 
 #### Table 47-5. TCP Simultaneous Connection Termination Procedure
 |Client | | |Server | | |
-|:-- |:-- |:-- |:-- |:-- |:-- |
+|:--- |:--- |:--- |:--- |:--- |:--- |
 |Start State |Action |Transitions to State |Start State |Action |Transitions to State |
 |ESTABLISHED |Client Close Step 1 Transmit: The application using TCP signals that the connection is no longer needed. The TCP on the client sends the next segment with the FIN bit set, indicating a request to close the connection. |FIN-WAIT-1 |ESTABLISHED |Server Close Step 1 Transmit: Before the server can receive the FIN that the client sent, the application on the server also signals a close. The server also sends a FIN. |FIN-WAIT-1 |
 |FIN-WAIT-1 |Server Close Step 1 Receive and Step 2 Transmit: The client has sent a FIN and is waiting for it to be acknowledged. Instead, it receives the FIN that the server sends. It acknowledges the server's close request with an ACK and continues to wait for its own ACK. |CLOSING |FIN-WAIT-1 |Client Close Step 1 Receive and Step 2 Transmit: The server has sent a FIN and is waiting for it to be acknowledged. Instead, it receives the FIN that the client sends. It acknowledges the client's close request with an ACK and continues to wait for its own ACK. |CLOSING |
@@ -1644,7 +1644,7 @@ Just as two devices can simultaneously open a TCP session, they can terminate it
 
 #### Table 48-1. TCP Segment Format
 |Field Name |Size (Bytes) |Description
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Source Port |2 |This is the 16-bit port number of the process that originated the TCP segment on the source device. This will normally be an ephemeral (client) port number for a request sent by a client to a server, or a well-known/registered (server) port number for a reply from a server to a client. |
 |Destination Port |2 |This is the 16-bit port number of the process that is the ultimate intended recipient of the message on the destination device. This will usually be a well-known/registered (server) port number for a client request, or an ephemeral (client) port number for a server reply. |
 |Sequence Number |4 |For normal transmissions, this is the sequence number of the first byte of data in this segment. In a connection request (SYN) message, this carries the ISN of the source TCP. The first byte of data will be given the next sequence number after the contents of this field, as described in Chapter 47. |
@@ -1661,7 +1661,7 @@ Just as two devices can simultaneously open a TCP session, they can terminate it
 
 #### Table 48-2. TCP Segment Control Bits
 |Subfield Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |URG |1/8 (1 bit) |Urgent bit: When set to 1, indicates that the priority data transfer feature has been invoked for this segment, and that the Urgent Pointer field is valid. |
 |ACK  |1/8 (1 bit) |Acknowledgment bit: When set to 1, indicates that this segment is carrying an acknowledgment, and the value of the Acknowledgment Number field is valid and carrying the next sequence expected from the destination of this segment. |
 |PSH |1/8 (1 bit) |Push bit: The sender of this segment is using the TCP push feature, requesting that the data in this segment be immediately pushed to the application on the receiving device. |
@@ -1674,14 +1674,14 @@ Figure 48-1. TCP segment format
 
 #### Table 48-3. TCP Segment Option Subfields
 |Subfield Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Option-Kind |1 |This specifies the option type. |
 |Option-Length |1 |This is the length of the entire option in bytes, including the Option-Kind and Option-Length fields. |
 |Option-Data |Variable |This field contains the option data itself. In at least one oddball case, this field is omitted (making Option-Length equal to 2). |
 
 #### Table 48-4. Some TCP Options
 |Option-Kind |Option-Length |Option-Data |Description |
-|:-- |:-- |:-- |:-- |
+|:--- |:--- |:--- |:--- |
 |0 |— |— |End of Option List: A single-byte option that marks the end of all options included in this segment. This needs to be included only when the end of the options doesn't coincide with the end of the TCP header. |
 |1 |— |— |No-Operation: A "spacer" that can be included between options to align a subsequent option on a 32-bit boundary if needed. |
 |2 |4 |Maximum Segment Size Value |Maximum Segment Size: Conveys the size of the largest segment the sender of the segment wishes to receive. Used only in connection request (SYN) messages. |
@@ -1695,7 +1695,7 @@ Figure 48-1. TCP segment format
 
 #### Table 48-5. TCP Pseudo Header for Checksum Calculations
 |Field Name |Size (Bytes) |Description |
-|:-- |:-- |:-- |
+|:--- |:--- |:--- |
 |Source Address |4 |This is the 32-bit IP address of the originator of the datagram, taken from the IP header. |
 |Destination Address |4 |This is the 32-bit IP address of the intended recipient of the datagram, also from the IP header. |
 |Reserved |1 |This consists of 8 bits of zeros. |
