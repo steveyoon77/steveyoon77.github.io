@@ -1,6 +1,14 @@
 # Book: 4G LTE-Advanced Pro and The Road to 5G
 Erik Dahlman, Stefan Parkvall, Johan Skold
 
+## Chapter 4. 무선 인터페이스 구조
+
+![](./img/2023-01-16-00.jpg)
+
+![](./img/2023-01-16-01.jpg)
+
+![](./img/2023-01-16-02.jpg)
+
 ## Chapter 11. Access procedures
 ### Acquisition and Cell search
 LTE 단말은 LTE network과 통신하기 이전에 다음의 과정을 수행해야 한다.

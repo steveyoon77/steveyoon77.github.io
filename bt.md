@@ -93,3 +93,9 @@ Slave가 여러개인 경우에는 아래와 같이 동작한다.
 ### Piconet Clocks
 
 ![](./img/2020-10-07-06.png)
+
+time_base_offset, slave_offset은 어떻게 정의되지? 
+* time_base_offset: How much of an observed offset is caused by external frame timing alignment. 
+* slave_offset: How much is caused by the offset between master and slave. 
+  * This offset shall be updated each time a packet is received from the master. 
+  * By comparing the exact RX timing of the received packet with the estimated RX timing, slaves shall correct the offset for any timing misalignments. 

@@ -965,7 +965,7 @@ control_data {
 |2|다른 것도 가능하지만 송신 디바이스는 LE Coded PHY를 선호한다| 
 |others|Reserved for future use| 
 
-* min_used_channels는 2~37의 값을 갖는다. 
+* min_used_channels는 2 ~ 37의 값을 갖는다. 
 
 #### 2.4.2.25. LL_CTE_REQ {u5.1} 
 
