@@ -5,48 +5,48 @@
 
 ![](./img/dab_protocol_stack.jpg)
 
-### DAB system standards and guidelines
+## DAB system standards and guidelines
 
   * EN 300 401 v1.4.1 : "main DAB" standard
-  * TR 101 496 : main guideline document. 3°³ÀÇ ¹®¼­·Î ³ª´©¾îÁü(TR 101 496-1,2,3).
-  * TS 100 756 : register table, signaling value¸¦ Á¤ÀÇ
-  * TS 102 367 : CAS(conditional access system) ¼³¸í
-  * TS 101 757 : Å×½ºÆ® ÀıÂ÷¿Í Å×½ºÆ® ºñÆ®½ºÆ®¸²¿¡ ´ëÇØ ¼³¸í
-  * EN 301 700 : FM-RDS service¸¦ tuning ÇÒ ¼ö ÀÖ´Â ¼­ºñ½º Á¤º¸¸¦ DAB receiver¿¡ ¾Ë·ÁÁÖ´Â ¹æ¹ı ¼³¸í
+  * TR 101 496 : main guideline document. 3ê°œì˜ ë¬¸ì„œë¡œ ë‚˜ëˆ„ì–´ì§(TR 101 496-1,2,3).
+  * TS 100 756 : register table, signaling valueë¥¼ ì •ì˜
+  * TS 102 367 : CAS(conditional access system) ì„¤ëª…
+  * TS 101 757 : í…ŒìŠ¤íŠ¸ ì ˆì°¨ì™€ í…ŒìŠ¤íŠ¸ ë¹„íŠ¸ìŠ¤íŠ¸ë¦¼ì— ëŒ€í•´ ì„¤ëª…
+  * EN 301 700 : FM-RDS serviceë¥¼ tuning í•  ìˆ˜ ìˆëŠ” ì„œë¹„ìŠ¤ ì •ë³´ë¥¼ DAB receiverì— ì•Œë ¤ì£¼ëŠ” ë°©ë²• ì„¤ëª…
 
-### DAB receiver standards and documents
+## DAB receiver standards and documents
 
   * EN 50248: characteristics of DAB receivers
-  * EACEM TR-004 : EMC directive; DAB receiver¸¦ À§ÇÑ EMC testÀÇ specific reference, requirement, method ±×¸®°í test conditionÀ» Á¤ÀÇÇÑ´Ù.
-  * EN 50255 : DAB receiver¿Í data decoderµé°£ÀÇ ÀÎÅÍÆäÀÌ½º¸¦ ¼³¸í.
-  * EN 50320 : DAB receiver¸¦ Á¦¾îÇÏ±â À§ÇÑ command setÀ» ¼³¸í. ÀÌ command setÀº ¼­·Î ´Ù¸¥ ¹°¸®Àû ¹ö½º ½Ã½ºÅÛ »ó¿¡¼­ ÀÌ¿ëµÇ´Â °ÍÀ» ÁöÇâÇÔ.
-  * TR 101 758 : ¸¸Á·½º·¯¿î DAB system ¿î¿ëÀ» À§ÇØ È£È¯ receiver °¨µµ¿Í ÇÊ¼ö ÇÊµå¸¦ ÃßÃâÇÏ´Â °­µµ¿¡ ´ëÇÑ ÀÏ¹İÀûÀÎ ¿øÄ¢¿¡ ´ëÇØ ¼³¸í.
+  * EACEM TR-004 : EMC directive; DAB receiverë¥¼ ìœ„í•œ EMC testì˜ specific reference, requirement, method ê·¸ë¦¬ê³  test conditionì„ ì •ì˜í•œë‹¤.
+  * EN 50255 : DAB receiverì™€ data decoderë“¤ê°„ì˜ ì¸í„°í˜ì´ìŠ¤ë¥¼ ì„¤ëª….
+  * EN 50320 : DAB receiverë¥¼ ì œì–´í•˜ê¸° ìœ„í•œ command setì„ ì„¤ëª…. ì´ command setì€ ì„œë¡œ ë‹¤ë¥¸ ë¬¼ë¦¬ì  ë²„ìŠ¤ ì‹œìŠ¤í…œ ìƒì—ì„œ ì´ìš©ë˜ëŠ” ê²ƒì„ ì§€í–¥í•¨.
+  * TR 101 758 : ë§Œì¡±ìŠ¤ëŸ¬ìš´ DAB system ìš´ìš©ì„ ìœ„í•´ í˜¸í™˜ receiver ê°ë„ì™€ í•„ìˆ˜ í•„ë“œë¥¼ ì¶”ì¶œí•˜ëŠ” ê°•ë„ì— ëŒ€í•œ ì¼ë°˜ì ì¸ ì›ì¹™ì— ëŒ€í•´ ì„¤ëª….
 
-### DAB transmission and network standards and documents
+## DAB transmission and network standards and documents
 ![](./img/800px-conceptualdabnetworkandstandards.jpg)
 
-  * EN 300 797 : STI(service transport interface)¸¦ ÅëÇØ DAB service component, service information, control informationÀÇ Àü¼ÛÀ» À§ÇÑ Ç¥ÁØÈ­µÈ ¹æ¹ıÀ» Á¦°øÇÑ´Ù.
-  * TS 101 860 : EN 300 797¿¡¼­ Á¤ÀÇµÈ ±â´ÉÀÇ ±¸Çö°ú ÀÌ¿ë¿¡ ´ëÇÑ °¡ÀÌµå
-  * EN 300 798 : DAB SFN¿¡¼­ °¢ ¼Û½Å »çÀÌÆ®¿¡ À§Ä¡µÈ ÀüÅëÀûÀÎ DAB Ã¤³Î ÄÚµù¿¡¼­ ÀÌ¿ëµÈ´Ù. ÀÌ Ç¥ÁØÀº DAB OFDM generatorÀÇ µÎ °³(baseband processing equipment, RF modulator) ÁÖ¿ä ¿ä¼Ò¿¡ ¾Ë¸Â´Â ÀÎÅÍÆäÀÌ½º Æ¯¼ºÀ» ¼³¸íÇÑ´Ù.
-  * ETS 300 799 : ¾Ó»óºí ¸ÖÆ¼ÇÃ·º¼­¿Í SFN Àü¼Û »çÀÌÆ®¿¡ À§Ä¡ÇÑ DAB º¯Á¶ ÀåÄ¡ »çÀÌ¿¡ DAB ½ÅÈ£ ¹èÄ¡ ¹æ¹ıÀ» Á¤ÀÇÇÑ´Ù.
-  * "MINIMUM requirements for Terrestrial DAB Transmitters" : EN 300 401¿¡ µû¸£´Â Áö»óÆÄ DAB Àü¼Û±âÀÇ ÃÖ¼Ò ¿ä±¸»çÇ× ¸ğÀ½
-  * EBU BPN 003 : ³×Æ®¿öÅ© °³³ä°ú Áö»óÆÄ DAB ¸Á °èÈ¹¿¡ ´ëÇÑ ¼³¸íÀ» À§ÇÑ ÁÖ ÆÄ¶ó¹ÌÅÍµéÀ» °í·ÁÇÑ´Ù.
+  * EN 300 797 : STI(service transport interface)ë¥¼ í†µí•´ DAB service component, service information, control informationì˜ ì „ì†¡ì„ ìœ„í•œ í‘œì¤€í™”ëœ ë°©ë²•ì„ ì œê³µí•œë‹¤.
+  * TS 101 860 : EN 300 797ì—ì„œ ì •ì˜ëœ ê¸°ëŠ¥ì˜ êµ¬í˜„ê³¼ ì´ìš©ì— ëŒ€í•œ ê°€ì´ë“œ
+  * EN 300 798 : DAB SFNì—ì„œ ê° ì†¡ì‹  ì‚¬ì´íŠ¸ì— ìœ„ì¹˜ëœ ì „í†µì ì¸ DAB ì±„ë„ ì½”ë”©ì—ì„œ ì´ìš©ëœë‹¤. ì´ í‘œì¤€ì€ DAB OFDM generatorì˜ ë‘ ê°œ(baseband processing equipment, RF modulator) ì£¼ìš” ìš”ì†Œì— ì•Œë§ëŠ” ì¸í„°í˜ì´ìŠ¤ íŠ¹ì„±ì„ ì„¤ëª…í•œë‹¤.
+  * ETS 300 799 : ì•™ìƒë¸” ë©€í‹°í”Œë ‰ì„œì™€ SFN ì „ì†¡ ì‚¬ì´íŠ¸ì— ìœ„ì¹˜í•œ DAB ë³€ì¡° ì¥ì¹˜ ì‚¬ì´ì— DAB ì‹ í˜¸ ë°°ì¹˜ ë°©ë²•ì„ ì •ì˜í•œë‹¤.
+  * "MINIMUM requirements for Terrestrial DAB Transmitters" : EN 300 401ì— ë”°ë¥´ëŠ” ì§€ìƒíŒŒ DAB ì „ì†¡ê¸°ì˜ ìµœì†Œ ìš”êµ¬ì‚¬í•­ ëª¨ìŒ
+  * EBU BPN 003 : ë„¤íŠ¸ì›Œí¬ ê°œë…ê³¼ ì§€ìƒíŒŒ DAB ë§ ê³„íšì— ëŒ€í•œ ì„¤ëª…ì„ ìœ„í•œ ì£¼ íŒŒë¼ë¯¸í„°ë“¤ì„ ê³ ë ¤í•œë‹¤.
 
-### Additional DAB standards and documents for data transmission
+## Additional DAB standards and documents for data transmission
 
-  * EN 301 234 : DAB ½Ã½ºÅÛ¿¡¼­ ÀÌ¿ëÇÏ´Â ´Ù¾çÇÑ Á¾·ùÀÇ µ¥ÀÌÅÍ¸¦ ºê·ÎµåÄ³½ºÆÃ ÇÒ ¼ö ÀÖ°Ô ÇÏ´Â MOT protocolÀ» Á¤ÀÇ
-  * TR 101 497 : MOT version 1.xxÀÇ °¡ÀÌµå¸¦ Á¦°ø. version 2.11°ú ÀÌÈÄ ¹öÀüÀÇ MOT specification°ú´Â °ü°è¾ø´Ù.
-  * TS 101 498 : ¼­ºñ½ºµé¿¡ ´ëÇÑ Á¤º¸¸¦ Á¦°øÇÏ±â À§ÇÑ ÄÜÅÙÆ® Æ÷¸ËÀ¸·Î HTMLÀ» ÀÌ¿ëÇÒ ¼ö ÀÖµµ·Ï DAB broadcast Web Site application¿¡ ´ëÇØ Á¤ÀÇÇÑ´Ù.
-  * TS 101 499 : ÀÌ¹ÌÁöÀÇ Æ÷¸Ë Á¤º¸¿Í ÇÔ²² ½½¶óÀÌµå ÀÌ¹ÌÁö¸¦ Àü¼ÛÇÏ±â À§ÇØ ¿ä±¸µÇ´Â ±â¼úµéÀ» Á¤ÀÇ; MOT SlideShow; User Application Specification;
-  * TS 101 759 : Eureka Project 147¿¡ ÀÇÇØ ¸¸µé¾îÁø ÀÌ ½ºÆåÀº DAB Àü¼Û ±¸°£ ³»¿¡¼­ Åõ¸íÇÏ°Ô µ¥ÀÌÅÍ¸¦ Àü´ŞÇÏ±â À§ÇØ ¿ä±¸µÈ ±â¼úµéÀ» Á¤ÀÇÇÑ´Ù. ÀÌ µ¥ÀÌÅÍ´Â Æ¯º°ÇÑ DAB Àü¼Û bearerÀÇ ¾î¶² ´Ù¸¥ ÆÄ¶ó¹ÌÅÍµé¿¡ °ü·ÃµÉ ÇÊ¿ä°¡ ¾ø´Ù.
-  * ES 201 735 : DAB packet mode ¼­ºñ½º ÄÄÆ÷³ÍÆ®¿¡¼­ IP diagramÀ» Àü¼ÛÇÏ´Â ¹æ¹ı ±â¼ú
-  * ES 201 736 : local interactive service, one-way interactive service, two-way interactive service·Î Á¤ÀÇµÈ ¼­ºñ½ºµé¿¡¼­ ÀÌ¿ëµÇ´Â ÇÁ·ÎÅäÄİ ½ºÅÃÀ» Á¤ÀÇÇÑ´Ù. ±×¸®°í DAB cellµé »çÀÌ¿¡ ÇÚµå¿À¹ö¿Í ºñ½ÁÇÑ ±â´É°ú ¼¼¼ÇµéÀÇ ±¸ÃàÀ» À§ÇÑ PSSC(Personal DAB Service Session Control) ÇÁ·ÎÅäÄİÀ» Á¤ÀÇÇÑ´Ù.
-  * ES 201 737 : Global System for Mobile communication(GSM), Public Switched Telecommunications System(PSTN), Integrated Services Digital Network(ISDN) ±×¸®°í Digital Enhanced Cordless Telecommunications(DECT)¸¦ ÅëÇÑ Interaction Channel ±¸¼ºÀ» Á¤ÀÇ
-  * TS 101 993 : java¸¦ À§ÇÑ APIs
-  * TS 102 818 : EPG(Electronic Programme Guide)¸¦ À§ÇÑ XML scheme data model
-  * TS 102 371 : ¼ö½Å±âÀÇ µ¥ÀÌÅÍ ÀúÀå ¿ë·® ¹üÀ§ÀÇ À±°ûÀ» Àâ°í Àü¼Û ºñÆ®·¹ÀÌÆ®¸¦ °¨¼Ò½ÃÅ°±â À§ÇÑ DAB Àü¼Û Ã¤³Î ³»ÀÇ ¾ĞÃàµÈ EPG(Electronic Programme Guide) µ¥ÀÌÅÍ¸¦ ¸í¼¼
-  * TS 102 368 : DAB Àü¼Û Ã¤³ÎÀ» ÅëÇÑ TMC dataÀÇ Àü¼Û°ú signaling ¸í¼¼
-  * TS 102 427 : RS FEC¸¦ Æ÷ÇÔÇÏ¿©, DAB MSC stream data sub-channel ³»¿¡ MPEG 2 TS¸¦ encapsulate ÇÏ´Â ¹æ¹ı ¸í¼¼
-  * TS 102 428 : DAB¸¦ ÅëÇÑ video ¼­ºñ½º¸¦ Á¦°øÇÏ´Â »ç¿ëÀÚ ÀÀ¿ë¿¡ ´ëÇÑ ¸í¼¼
-  * TS 102 980 : DL plus ¸í¼¼
+  * EN 301 234 : DAB ì‹œìŠ¤í…œì—ì„œ ì´ìš©í•˜ëŠ” ë‹¤ì–‘í•œ ì¢…ë¥˜ì˜ ë°ì´í„°ë¥¼ ë¸Œë¡œë“œìºìŠ¤íŒ… í•  ìˆ˜ ìˆê²Œ í•˜ëŠ” MOT protocolì„ ì •ì˜
+  * TR 101 497 : MOT version 1.xxì˜ ê°€ì´ë“œë¥¼ ì œê³µ. version 2.11ê³¼ ì´í›„ ë²„ì „ì˜ MOT specificationê³¼ëŠ” ê´€ê³„ì—†ë‹¤.
+  * TS 101 498 : ì„œë¹„ìŠ¤ë“¤ì— ëŒ€í•œ ì •ë³´ë¥¼ ì œê³µí•˜ê¸° ìœ„í•œ ì½˜í…íŠ¸ í¬ë§·ìœ¼ë¡œ HTMLì„ ì´ìš©í•  ìˆ˜ ìˆë„ë¡ DAB broadcast Web Site applicationì— ëŒ€í•´ ì •ì˜í•œë‹¤.
+  * TS 101 499 : ì´ë¯¸ì§€ì˜ í¬ë§· ì •ë³´ì™€ í•¨ê»˜ ìŠ¬ë¼ì´ë“œ ì´ë¯¸ì§€ë¥¼ ì „ì†¡í•˜ê¸° ìœ„í•´ ìš”êµ¬ë˜ëŠ” ê¸°ìˆ ë“¤ì„ ì •ì˜; MOT SlideShow; User Application Specification;
+  * TS 101 759 : Eureka Project 147ì— ì˜í•´ ë§Œë“¤ì–´ì§„ ì´ ìŠ¤í™ì€ DAB ì „ì†¡ êµ¬ê°„ ë‚´ì—ì„œ íˆ¬ëª…í•˜ê²Œ ë°ì´í„°ë¥¼ ì „ë‹¬í•˜ê¸° ìœ„í•´ ìš”êµ¬ëœ ê¸°ìˆ ë“¤ì„ ì •ì˜í•œë‹¤. ì´ ë°ì´í„°ëŠ” íŠ¹ë³„í•œ DAB ì „ì†¡ bearerì˜ ì–´ë–¤ ë‹¤ë¥¸ íŒŒë¼ë¯¸í„°ë“¤ì— ê´€ë ¨ë  í•„ìš”ê°€ ì—†ë‹¤.
+  * ES 201 735 : DAB packet mode ì„œë¹„ìŠ¤ ì»´í¬ë„ŒíŠ¸ì—ì„œ IP diagramì„ ì „ì†¡í•˜ëŠ” ë°©ë²• ê¸°ìˆ 
+  * ES 201 736 : local interactive service, one-way interactive service, two-way interactive serviceë¡œ ì •ì˜ëœ ì„œë¹„ìŠ¤ë“¤ì—ì„œ ì´ìš©ë˜ëŠ” í”„ë¡œí† ì½œ ìŠ¤íƒì„ ì •ì˜í•œë‹¤. ê·¸ë¦¬ê³  DAB cellë“¤ ì‚¬ì´ì— í•¸ë“œì˜¤ë²„ì™€ ë¹„ìŠ·í•œ ê¸°ëŠ¥ê³¼ ì„¸ì…˜ë“¤ì˜ êµ¬ì¶•ì„ ìœ„í•œ PSSC(Personal DAB Service Session Control) í”„ë¡œí† ì½œì„ ì •ì˜í•œë‹¤.
+  * ES 201 737 : Global System for Mobile communication(GSM), Public Switched Telecommunications System(PSTN), Integrated Services Digital Network(ISDN) ê·¸ë¦¬ê³  Digital Enhanced Cordless Telecommunications(DECT)ë¥¼ í†µí•œ Interaction Channel êµ¬ì„±ì„ ì •ì˜
+  * TS 101 993 : javaë¥¼ ìœ„í•œ APIs
+  * TS 102 818 : EPG(Electronic Programme Guide)ë¥¼ ìœ„í•œ XML scheme data model
+  * TS 102 371 : ìˆ˜ì‹ ê¸°ì˜ ë°ì´í„° ì €ì¥ ìš©ëŸ‰ ë²”ìœ„ì˜ ìœ¤ê³½ì„ ì¡ê³  ì „ì†¡ ë¹„íŠ¸ë ˆì´íŠ¸ë¥¼ ê°ì†Œì‹œí‚¤ê¸° ìœ„í•œ DAB ì „ì†¡ ì±„ë„ ë‚´ì˜ ì••ì¶•ëœ EPG(Electronic Programme Guide) ë°ì´í„°ë¥¼ ëª…ì„¸
+  * TS 102 368 : DAB ì „ì†¡ ì±„ë„ì„ í†µí•œ TMC dataì˜ ì „ì†¡ê³¼ signaling ëª…ì„¸
+  * TS 102 427 : RS FECë¥¼ í¬í•¨í•˜ì—¬, DAB MSC stream data sub-channel ë‚´ì— MPEG 2 TSë¥¼ encapsulate í•˜ëŠ” ë°©ë²• ëª…ì„¸
+  * TS 102 428 : DABë¥¼ í†µí•œ video ì„œë¹„ìŠ¤ë¥¼ ì œê³µí•˜ëŠ” ì‚¬ìš©ì ì‘ìš©ì— ëŒ€í•œ ëª…ì„¸
+  * TS 102 980 : DL plus ëª…ì„¸
   * TS 103 736 : Rules of implementation; Service Information Features;
