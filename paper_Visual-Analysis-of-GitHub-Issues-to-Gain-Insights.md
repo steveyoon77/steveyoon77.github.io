@@ -1,5 +1,5 @@
 # (paper) Visual Analysis of GitHub Issues to Gain Insights
-- [https://arxiv.org/pdf/2407.20900](./data/\(paper\) Visual Analysis of GitHub Issues to Gain Insights.pdf)
+- [(paper)Visual Analysis of GitHub Issues to Gain Insights](https://arxiv.org/pdf/2407.20900)
 - Rifat Ara Proma
     + Scientific Computing and Imaging Institute
     + University of Utah

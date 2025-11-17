@@ -33,4 +33,3 @@
 * [paper: Kalman Filter로 IMU와 GPS 결합](./paper_KalmanFilter로_IMU와_GPS_결합.md)
 * [thesis: sensor fusion of GPS and accelerometer data for estimation of vehicle dynamics](./thesis_Mats_Malmberg_GPS_ACC_결합.md)
 * [thesis: Motion tracking in field sports using GPS and IMU](./thesis_Motion_tracking_using_GPS_IMU_roobeek.md)
-* [paper: Visual Analysis of GitHub Issues to Gain Insights](./paper_Visual-Analysis-of-GitHub-Issues-to-Gain-Insights.md)
