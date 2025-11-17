@@ -5,6 +5,10 @@ I'm using official HackRF One
 
 - https://greatscottgadgets.com/hackrf/one/
 
+### Software installation
+
+- https://downloads.myriadrf.org/builds/PothosSDR/
+
 ## TCXO
 HackRF One requires TCXO for precised GPS signal transmitting: https://github.com/osqzss/gps-sdr-sim/issues/305
 
@@ -25,6 +29,7 @@ gcc gpssim.o -lm -o gps-sdr-sim
 ```
 
 ### Usage of the software
+
 ```
 NVLSI+styo@DESKTOP-UEH6C9P MINGW64 /c/working/gps-sdr-sim
 $ ./gps-sdr-sim.exe
@@ -44,15 +49,22 @@ Options:
   -i               Disable ionospheric delay for spacecraft scenario
   -v               Show details about simulated channels
 ```
+
 ### GPS satellite information update
 As below commentary copied from its GitHub README, the start time could be updated.
 
 ```
-The user specifies the GPS satellite constellation through a GPS broadcast ephemeris file. The daily GPS broadcast ephemeris file (brdc) is a merge of the individual site navigation files into one. The archive for the daily file is:
+The user specifies the GPS satellite constellation through a GPS
+broadcast ephemeris file. The daily GPS broadcast ephemeris file 
+(brdc) is a merge of the individual site navigation files into 
+one. The archive for the daily file is:
 
 https://cddis.nasa.gov/archive/gnss/data/daily
 
-These files are then used to generate the simulated pseudorange and Doppler for the GPS satellites in view. This simulated range data is then used to generate the digitized I/Q samples for the GPS signal.
+These files are then used to generate the simulated pseudorange 
+and Doppler for the GPS satellites in view. This simulated range 
+data is then used to generate the digitized I/Q samples for the 
+GPS signal.
 ```
 
 ### Generating GPS signal stream file

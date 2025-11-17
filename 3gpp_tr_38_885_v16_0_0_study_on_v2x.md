@@ -11,12 +11,12 @@ V2V 및 V2X 서비스에 대한 지원은 3GPP 플랫폼을 자동차 산업으�
 4) 원격 운전은 원격 운전자 또는 V2X 애플리케이션이 스스로 운전할 수 없는 승객이나 위험한 환경에 있는 원격 차량을 위해 원격 차량을 작동할 수 있도록 합니다. 대중교통과 같이 변동이 적고 경로를 예측할 수 있는 경우에는 클라우드 컴퓨팅 기반의 운전을 사용할 수 있습니다. 높은 안정성과 짧은 대기 시간이 주요 요구 사항입니다.
 
 TSG RAN에서 NR에 대한 해당 5G RAN 요구 사항 세트, 채널 모델 등은 TR 38.913 및 TR 37.885에 정의되어 있습니다.
-이 연구는 3GPP 플랫폼에서 V2X 지원의 3단계로 NR에서 이러한 고급 사용 사례 및 요구 사항을 지원하는 RAN 측면을 조사합니다. 이 TR은 다음에 대한 연구 결과를 보고합니다. V2X용 NR SL 디자인; 고급 V2X 사용 사례를 위한 Uu 개선 사항 LTE 및 NR에 의한 Uu 기반 SL 자원 할당/구성 RAT 및 인터페이스 선택; QoS 관리; 및 NR과 LTE SL 사이의 비동채널 공존. 이 연구는 6GHz 이하, 즉 FR1 (Frequency Range 1) 및 FR2 (Frequency Range 2), 최대 52.6GHz의 주파수 범위에서 허가되지 않은 ITS(Intelligent Transport System) 대역 및 허가된 대역을 다룹니다. 이러한 측면에서 볼 수 있듯이 NR V2X는 고급 V2X 서비스를 위해 LTE V2X를 보완하고 LTE V2X와의 연동을 지원할 것입니다.
+이 연구는 3GPP 플랫폼에서 V2X 지원의 3단계로 NR에서 이러한 고급 사용 사례 및 요구 사항을 지원하는 RAN 측면을 조사합니다. 이 TR은 다음에 대한 연구 결과를 보고합니다. V2X용 NR SL 디자인, 고급 V2X 사용 사례를 위한 Uu 개선 사항 LTE 및 NR에 의한 Uu 기반 SL 자원 할당/구성 RAT 및 인터페이스 선택, QoS 관리, 및 NR과 LTE SL 사이의 비공동 채널 공존(non-cochannel coexistence) 입니다. 이 연구는 6GHz 이하, 즉 FR1 (Frequency Range 1) 및 FR2 (Frequency Range 2), 최대 52.6GHz의 주파수 범위에서 허가되지 않은 ITS(Intelligent Transport System) 대역 및 허가된 대역을 다룹니다. 이러한 측면에서 볼 수 있듯이 NR V2X는 고급 V2X 서비스를 위해 LTE V2X를 보완하고 LTE V2X와의 연동을 지원할 것입니다.
 이 문서의 나머지 부분에서는 NR SL 또는 LTE SL을 구체적으로 언급할 수 있습니다. RAT가 표시되지 않으면 NR SL을 의미합니다.
 
 ### 4.1 Operation scenarios
 
-연구에서 고려된 시나리오는 다음 그림과 같습니다. 시나리오는 아키텍처와 관련하여 독립형 시나리오와 MR-DC (Multi-Radio Dual Connectivity) 시나리오로 분류할 수 있습니다. 이 연구는 시나리오 1, 2, 3에 우선순위를 두었고, 시나리오 1, 2, 3에서 각각 다루는 시나리오 4, 5, 6에서 NR SL과 LTE SL을 모두 제어/구성하는 MN(Master Node)에 우선순위를 두었습니다.
+연구에서 고려된 시나리오는 다음 그림과 같습니다. 시나리오는 아키텍처와 관련하여 독립형 시나리오와 MR-DC (Multi-Radio Dual Connectivity) 시나리오로 분류할 수 있습니다. 이 연구는 시나리오 1, 2, 3에 우선순위를 두었고, 시나리오 1, 2, 3에서 각각 다루는 시나리오 4, 5, 6에서 NR SL(Sidelink)과 LTE SL을 모두 제어/구성하는 MN(Master Node)에 우선순위를 두었습니다.
 그림 4.1-1, 그림 4.1-2 및 그림 4.1-3은 V2X SL 통신을 지원하는 독립형 시나리오를 보여줍니다. 특히:
 1) 시나리오 1에서 gNB는 LTE SL 및 NR SL 모두에서 UE의 V2X 통신을 위한 제어/구성을 제공합니다.
 2) 시나리오 2에서 ng-eNB는 LTE SL 및 NR SL 모두에서 UE의 V2X 통신을 위한 제어/구성을 제공합니다.
@@ -38,7 +38,7 @@ TSG RAN에서 NR에 대한 해당 5G RAN 요구 사항 세트, 채널 모델 등
 그림 4.1-4, 그림 4.1-5 및 그림 4.1-6은 V2X SL 통신을 지원하기 위한 MR-DC 시나리오를 보여줍니다. 특히:
 1) 시나리오 4에서, LTE SL 및 NR SL에서 UE의 V2X 통신은 UE가 NE-DC (NR-E-UTRA Dual Connetivity)로 구성되는 동안 Uu에 의해 제어/구성됩니다.
 2) 시나리오 5에서, LTE SL 및 NR SL에서 UE의 V2X 통신은 UE가 NGEN-DC (NG-RAN E-UTRA-NR Dual Connectivity)에서 구성되는 동안 Uu에 의해 제어/구성됩니다.
-3) 시나리오 6에서 LTE SL 및 NR SL에서의 UE의 V2X 통신은 UE가 EN-DC에서 구성되는 동안 Uu에 의해 제어/구성된다.
+3) 시나리오 6에서 LTE SL 및 NR SL에서의 UE의 V2X 통신은 UE가 EN-DC에서 구성되는 동안 Uu에 의해 제어/구성됩니다.
 
 - Figure 4.1-4: Scenario 4
 
@@ -57,7 +57,7 @@ TSG RAN에서 NR에 대한 해당 5G RAN 요구 사항 세트, 채널 모델 등
 ### 5.1 NR sidelink unicast, groupcast, and broadcast design
 
 SL 브로드캐스트, 그룹캐스트 및 유니캐스트 전송은 커버리지 내, 커버리지 외 및 부분 커버리지 시나리오에 대해 지원됩니다.
-PC5 인터페이스의 제어 평면에 대한 AS 프로토콜 스택은 최소한 RRC, PDCP, RLC 및 MAC 하위 계층과 물리 계층으로 구성됩니다. PC5-C의 프로토콜 스택은 그림 5.1-1에 나와 있습니다.
+PC5 인터페이스의 제어 평면에 대한 AS(Access Stratum) 프로토콜 스택은 최소한 RRC, PDCP, RLC 및 MAC 하위 계층과 물리 계층으로 구성됩니다. PC5-C의 프로토콜 스택은 그림 5.1-1에 나와 있습니다.
 
 - Figure 5.1-1: PC5 control plane (PC5-C) protocol stack
 
@@ -71,17 +71,17 @@ PC5 인터페이스의 사용자 평면에 대한 AS 프로토콜 스택은 SDAP
 
 물리 계층 분석을 위해 상위 계층이 특정 데이터 전송에 유니캐스트, 그룹캐스트 또는 브로드캐스트 전송을 사용할지 여부를 결정하고 이에 따라 물리 계층에 알린다고 가정합니다. 유니캐스트 또는 그룹캐스트 전송을 고려할 때, UE는 전송이 속한 유니캐스트 또는 그룹캐스트 세션을 설정할 수 있고 다음 정보가 물리 계층에 알려져 있다고 가정합니다.
 - IDs:
-    + SCI로 전달되는 레이어 1 소스 및 대상 ID
-    + 적어도 HARQ 피드백이 사용 중일 때 수신에서 결합될 수 있는 전송을 식별하기 위한 목적으로 PSCCH를 통해 전달되는 추가 레이어-1 ID(섹션 5.1.2.2 참조)
+    + SCI로 전달되는 Layer 1 소스 및 대상 ID
+    + 적어도 HARQ 피드백이 사용 중일 때 수신에서 결합될 수 있는 전송을 식별하기 위한 목적으로 PSCCH를 통해 전달되는 추가 Layer-1 ID(섹션 5.1.2.2 참조)
     + HARQ 프로세스 ID
 
-계층 2 분석을 위해 상위 계층(즉, AS 위)이 특정 데이터 전송에 대한 유니캐스트, 그룹캐스트 또는 브로드캐스트 전송인지에 대한 정보를 제공한다고 가정합니다. SL의 유니캐스트 및 그룹캐스트 전송을 위해 다음 정보가 레이어 2에 알려져 있습니다.
+Layer 2 분석을 위해 상위 계층(즉, AS 위)이 특정 데이터 전송에 대한 유니캐스트, 그룹캐스트 또는 브로드캐스트 전송인지에 대한 정보를 제공한다고 가정합니다. SL의 유니캐스트 및 그룹캐스트 전송을 위해 다음 정보가 Layer 2에 알려져 있습니다.
 - IDs:
     + 유니캐스트: 대상 ID, 소스 ID
     + Groupcast: 대상 그룹 ID, 소스 ID
 
-그룹 대상 계층 2 ID를 수신하도록 구성된 모든 UE는 상위 계층에서 제공하는 "최소 통신 범위" 내에 있든 없든 그룹캐스트 전송을 수신할 수 있습니다.
-유니캐스트의 AS 수준 링크 관리를 위해 SL RLM/RLF 선언이 지원됩니다. SL 유니캐스트의 RLC AM의 경우, 최대 재전송 횟수에 도달했다는 RLC의 표시에 의해 RLF 선언이 트리거됩니다. AS 레벨 링크 상태(예: 장애)는 상위 계층에 알려야 합니다. 유니캐스트에 대한 RLM 절차와 다른 그룹캐스트에 특정한 RLM 설계는 고려되지 않습니다. 그룹캐스트를 위해 그룹 구성원 간에 RLM/RLF 선언이 필요하지 않습니다.
+그룹 대상 Layer 2 ID를 수신하도록 구성된 모든 UE는 상위 계층에서 제공하는 "최소 통신 범위" 내에 있든 없든 그룹캐스트 전송을 수신할 수 있습니다.
+유니캐스트의 AS 수준의 링크 관리를 위해 SL RLM/RLF 선언이 지원됩니다. SL 유니캐스트의 RLC AM의 경우, 최대 재전송 횟수에 도달했다는 RLC의 표시에 의해 RLF 선언이 트리거됩니다. AS 레벨 링크 상태(예: 장애)는 상위 계층에 알려야 합니다. 유니캐스트에 대한 RLM 절차와 다른 그룹캐스트에 특정한 RLM 설계는 고려되지 않습니다. 그룹캐스트를 위해 그룹 구성원 간에 RLM/RLF 선언이 필요하지 않습니다.
 유니캐스트 및 그룹캐스트 전송을 위한 탐색 절차 및 관련 메시지는 상위 계층에 있습니다.
 
 #### 5.1.1 Physical layer structures
@@ -91,7 +91,7 @@ PC5 인터페이스의 사용자 평면에 대한 AS 프로토콜 스택은 SDAP
 
 ##### 5.1.1.1 Subcarrier spacing and cyclic prefix
 
-FR1에서 15kHz, 30kHz 및 60kHz SCS는 일반 CP로 지원되고 60kHz SCS는 확장 CP로도 지원됩니다. FR2에서는 일반 CP로 60kHz 및 120kHz SCS를 지원하고 확장 CP로 60kHz SCS를 지원합니다. 주어진 반송파에서, UE는 SCS와 CP의 둘 이상의 조합으로 SL 전송을 동시에 수신하거나 둘 이상의 SCS와 CP 조합으로 SL 전송을 동시에 전송할 필요가 없습니다. [수비학](https://ai-com.tistory.com/entry/NR-%EC%A0%84%EC%86%A1-%EA%B5%AC%EC%A1%B0-1-Numerology) 구성은 SL BWP 구성의 일부입니다(섹션 5.1.1.3 참조).
+FR1에서 15kHz, 30kHz 및 60kHz SCS는 일반 CP로 지원되고 60kHz SCS는 확장 CP로도 지원됩니다. FR2에서는 일반 CP로 60kHz 및 120kHz SCS를 지원하고 확장 CP로 60kHz SCS를 지원합니다. 주어진 반송파에서, UE는 SCS와 CP의 둘 이상의 조합으로 SL 전송을 동시에 수신하거나 둘 이상의 SCS와 CP 조합으로 SL 전송을 동시에 전송할 필요가 없습니다. [수비학](https://ai-com.tistory.com/entry/NR-%EC%A0%84%EC%86%A1-%EA%B5%AC%EC%A1%B0-1-Numerology) 구성은 SL BWP(Bandwidth Part) 구성의 일부입니다(섹션 5.1.1.3 참조).
 
 ##### 5.1.1.2 Channel coding
 NR Uu에서 데이터 및 제어를 위해 정의된 채널 코딩은 각각 NR SL에서 데이터 및 제어를 위한 시작점입니다.
@@ -103,11 +103,11 @@ BWP는 SL에 대해 정의되며 동일한 SL BWP가 송수신에 사용됩니�
 
 ##### 5.1.1.4 Resource arrangements
 NR V2X는 ITS 서비스 전용 캐리어 또는 셀룰러 서비스와 공유되는 캐리어에 배치될 수 있습니다. 따라서, 슬롯의 모든 심볼이 SL에 대해 이용 가능하고 슬롯 내의 연속적인 심볼의 서브셋(동적으로 표시되지 않음)만이 SL에 대해 이용 가능하도록 리소스가 배치됩니다. 표준 사양 작업에서 향후 호환성 문제를 찾지 못한 경우, 셀룰러 서비스와 공유되는 캐리어에 배치되는 것은 ITS 스펙트럼에서 사용하기 위한 것이 아닙니다.
-PSSCH를 위한 자원할당은 주파수 영역에서의 부채널 개념을 기반으로 하며, 단말은 반송파 상의 슬롯에서 송신 또는 수신을 수행한다. TB(Transport Block)의 블라인드 재전송이 지원되며 자원 할당 모드 2(섹션 5.3.1 참조)는 적어도 이러한 블라인드 재전송을 위해 SL 리소스 예약을 지원합니다.
+PSSCH를 위한 자원할당은 주파수 영역에서의 부채널 개념을 기반으로 하며, 단말은 반송파 상의 슬롯에서 송신 또는 수신을 수행합니다. TB(Transport Block)의 블라인드 재전송이 지원되며 자원 할당 모드 2(섹션 5.3.1 참조)는 적어도 이러한 블라인드 재전송을 위해 SL 리소스 예약을 지원합니다.
 PSFCH(섹션 5.1.2.2 참조)는 최소한 슬롯에서 SL에 사용할 수 있는 마지막 심볼(들)을 사용하는 형식을 지원합니다.
 
 ##### 5.1.1.5 Reference signals
-PSSCH와 관련된 DM-RS(Demodulation Reference Signal)는 시간 영역에서 가능한 여러 패턴 중 하나로 전송됩니다. FR2에서는 PSSCH용 PT-RS도 지원한다.
+PSSCH와 관련된 DM-RS(Demodulation Reference Signal)는 시간 영역에서 가능한 여러 패턴 중 하나로 전송됩니다. FR2에서는 PSSCH용 PT-RS(Phase Tracking Reference Signal)도 지원한다.
 다른 후보 참조 신호는 CSI-RS(CSI 절차에 대해서는 섹션 5.1.2.3 참조), SRS 및 AGC 훈련 신호입니다.
 
 #### 5.1.2 Physical layer procedures
@@ -115,22 +115,26 @@ PSSCH와 관련된 DM-RS(Demodulation Reference Signal)는 시간 영역에서 �
 
 #### 5.1.2.1 Multiplexing of physical channels
 PSSCH는 PSCCH가 PSSCH를 디코딩하는 데 필요한 최소한의 SCI를 전달할 때 PSCCH에 "연결"되었다고 합니다. PSCCH 및 연관된 PSSCH의 다중화를 위한 다음 옵션이 연구됩니다.
+
 옵션 1: PSCCH 및 연관된 PSSCH는 비중첩 시간 자원을 사용하여 전송됩니다.
+
 - 옵션 1A: 두 채널에서 사용하는 주파수 자원이 동일합니다.
 - 옵션 1B: 두 채널이 사용하는 주파수 자원이 다를 수 있습니다.
+
 옵션 2: PSCCH 및 관련 PSSCH는 전송에 사용되는 모든 시간 자원에서 비중첩 주파수 자원을 사용하여 전송됩니다. 두 채널이 사용하는 시간 리소스는 동일합니다.
+
 옵션 3: 일부 PSCCH 및 연관된 PSSCH는 비중첩 주파수 자원에서 중첩 시간 자원을 사용하여 전송되지만, 연관된 PSSCH의 다른 일부 및/또는 PSCCH의 다른 일부는 비중첩 시간 자원을 사용하여 전송됩니다.
 
 - Figure 5.1-3: Illustration of multiplexing options for PSCCH and associated PSSCH
 
 ![Figure 5.1-3: Illustration of multiplexing options for PSCCH and associated PSSCH](./img/2023-03-13-08.png)
 
-위에서 설명한 옵션 중 적어도 옵션 3이 지원됩니다. (편집자 주: 이것은 RAN1의 가정임)
+위에서 설명한 옵션 중 최소한 옵션 3은 지원됩니다. (편집자 주: 이것은 RAN1의 가정임)
 
 ##### 5.1.2.2 HARQ procedures
 
 ###### 5.1.2.2.1 General HARQ procedure
-SL 유니캐스트 및 그룹캐스트의 경우 물리적 계층에서 HARQ 피드백 및 HARQ 결합이 지원됩니다. PSSCH에 대한 HARQ-ACK 피드백은 자원 할당 모드 1 및 2에서 PSFCH를 통해 SFCI 형식으로 전달됩니다.
+SL 유니캐스트 및 그룹캐스트의 경우 물리적 계층에서 HARQ 피드백 및 HARQ 결합이 지원됩니다. PSSCH에 대한 HARQ-ACK 피드백은 자원 할당 모드 1 및 2에서 PSFCH(physical sidelink feedback channel)를 통해 SFCI(SL feedback control information) 형식으로 전달됩니다.
 유니캐스트에 대해 SL HARQ 피드백이 활성화된 경우 CBG(Codeblock Group)가 아닌 경우 수신기 UE는 해당 TB(Transport Block)를 성공적으로 디코딩하면 HARQ-ACK를 생성합니다. 수신기 UE를 대상으로 하는 관련 PSCCH를 디코딩한 후 해당 TB(Transport Block)를 성공적으로 디코딩하지 못하면 HARQ-NACK을 생성합니다.
 그룹캐스트에 대해 SL HARQ 피드백이 활성화되면 HARQ 피드백 전송 여부를 결정할 때 TX-RX 거리 및/또는 RSRP(Reference Signal Received Power)를 사용하도록 지원됩니다. 비 CBG 작업의 경우 두 가지 옵션이 지원됩니다. (편집자 주: 이것은 RAN1의 가정임 )
 - 옵션 1: Receiver UE는 연관된 PSCCH를 디코딩한 후 해당 TB(Transport Block)를 디코딩하지 못하면 PSFCH(Physical SL Feedback Channel)를 통해 HARQ-NACK을 전송합니다. 그렇지 않으면 PSFCH에서 신호를 전송하지 않습니다.
@@ -201,9 +205,7 @@ SL 리소스 할당 모드 2의 정의는 다음을 다룹니다.
 #### 5.3.1 Resource allocation Mode 2
 자원 할당 모드 2는 최소한 블라인드 재전송을 위해 SL 자원 예약을 지원합니다.
 
-```text
-LTE-V2X에서는 Broadcast만 지원하기 때문에, Feedback-based HARQ없이 2번까지 재전송할 수 있게 설계함 (Blind-Retransmission)으로써, Reliability를 높이도록 하였다. 
-```
+*LTE-V2X에서는 Broadcast만 지원하기 때문에, Feedback-based HARQ없이 2번까지 재전송할 수 있게 설계함 (Blind-Retransmission)으로써, Reliability를 높이도록 하였다.*
 
 ##### 5.3.1.1 Sensing and resource (re-selection)
 센싱 및 자원 (재)선택 관련 절차는 자원 할당 모드 2를 위해 지원됩니다.
@@ -221,7 +223,7 @@ SL 자원 선택을 위해 다음과 같은 측면을 연구합니다.
 - 자원 선택 절차를 위해 UE가 사용하는 정보
 
 ##### 5.3.1.3 Mode 2(c)
-범위 외 운용의 경우 모드 2(c)는 각 SL 리소스 풀에 정의된 단일 또는 다중 SL 전송 패턴의 (사전) 구성을 가정합니다. 커버리지 내 작동의 경우 모드 2(c)는 gNB 구성이 각 SL 리소스 풀에 정의된 단일 또는 다중 SL 전송 패턴을 나타낸다고 가정합니다. 송신 단말에게 설정된 단일 패턴이 있는 경우 단말은 센싱 절차를 수행하지 않으며, 여러 패턴이 설정된 경우 센싱 절차가 있을 가능성이 있다.
+범위 외 운용의 경우 모드 2(c)는 각 SL 리소스 풀에 정의된 단일 또는 다중 SL 전송 패턴의 (사전) 구성을 가정합니다. 커버리지 내 작동의 경우 모드 2(c)는 gNB 구성이 각 SL 리소스 풀에 정의된 단일 또는 다중 SL 전송 패턴을 나타낸다고 가정합니다. 송신 단말에게 설정된 단일 패턴이 있는 경우 단말은 센싱 절차를 수행하지 않으며, 여러 패턴이 설정된 경우 센싱 절차가 있을 가능성이 있습니다.
 '패턴'은 리소스의 크기와 위치, 시간 및 빈도, 리소스 수로 정의됩니다.
 
 ##### 5.3.1.4 Mode 2(d)
@@ -321,7 +323,7 @@ V2X SL 통신을 지원하기 위해 RRC 계층은 Uu에서 최소한 다음과 
 
 ##### 6.2.1.2 MAC
 V2X SL 통신을 지원하기 위해 MAC 계층은 Uu에서 최소한 다음 기능을 제공합니다.
-- 일정 요청:
+- 스케쥴링 요청:
     + UL 및 SL에 대한 별도의 SR 리소스 및 구성
     + 서로 다른 SL 논리 채널에 대한 여러 SR 리소스 및 구성
 - Sidelink 버퍼 상태 보고:
