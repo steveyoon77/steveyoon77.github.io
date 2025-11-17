@@ -1,5 +1,6 @@
 # Study notes
 
+* [5G NR PHY study note](./mastering_5g_nr_phy.md.md)
 * [Bluetooth Low Energy](./ble.md)
 	* [BT 5.x overview](./bt5x_overview.md) ([en](./bt5x_overview_en.md))
 * [Bluetooth Classic](./bt.md)
